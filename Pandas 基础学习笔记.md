@@ -84,7 +84,7 @@ print(df)
 # 方式1：drop()方法（最常用，推荐），inplace=True表示原地修改
 df.drop(columns=["年级"], inplace=True)
 # 方式2：del关键字（简单直接，适合单个列删除）
-# del df["年级"]
+del df["年级"]
 # 方式3：删除多列（示例，可搭配使用）
 # df.drop(columns=["年级", "性别"], inplace=True)
 print("删除“年级”列后：")
