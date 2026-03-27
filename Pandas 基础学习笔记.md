@@ -205,4 +205,6 @@ for index, row in df.iterrows():
           "专业：", row["专业"])
 #最后把处理好的表格保存为新的 Excel：最终结果.xlsx
 df.to_excel("保存后的学生信息.xlsx",index=False)
+# `df.head(5)               意思：取表格里「最上面的 5 行」
+# `df.nlargest(5, "分数")    意思：自动找出分数最高的 5 个人
 ```
