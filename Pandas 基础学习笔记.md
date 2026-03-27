@@ -158,6 +158,7 @@ print("表格已保存！")
 
 ```
 ### 七、阶段性练习题
+
 ```python
 df=pd.read_excel("学生信息.xlsx")
 print("有多少空值",df.isnull().sum())
