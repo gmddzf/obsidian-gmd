@@ -92,6 +92,8 @@ result=df.groupby("专业")["分数"].agg([
 ])
 print("按专业分组统计：")
 print(result)
+
+#3. 取前三名
 ```
 
 ### 五、表格排序与索引重置
