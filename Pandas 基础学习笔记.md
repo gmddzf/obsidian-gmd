@@ -66,7 +66,15 @@ df["专业"]=df["专业"].replace({
     "电气":"电子信息"
 })
 
-# 4. 删除重复行（两种方式）
+# 4. 修改列名（重点：将“分数”改为“总成绩”）
+# 方式1：单个列名修改（最常用，精准高效）
+df.rename(columns={"分数": "总成绩"}, inplace=True)
+# 方式2：多个列名修改（可搭配使用，示例）
+# df.rename(columns={"分数": "总成绩", "专业": "所学专业"}, inplace=True)
+print("修改列名后（分数→总成绩）：")
+print(df)
+
+# 5. 删除重复行（两种方式）
 df.drop_duplicates(inplace=True)  # 删除所有重复行
 df.drop_duplicates(subset=["姓名"], keep="first", inplace=True)  # 按姓名去重，保留第一个
 print("去重后：")
