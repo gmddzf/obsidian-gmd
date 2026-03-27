@@ -157,3 +157,51 @@ df.to_excel("处理后学生信息.xlsx", index=False)
 print("表格已保存！")
 
 ```
+### 七、阶段性练习题
+```python
+df=pd.read_excel("学生信息.xlsx")
+print("有多少空值",df.isnull().sum())
+#删除所有空行
+df=df.dropna()
+print("删除所有空行后",df)
+#删除重复行
+df=df.drop_duplicates()
+#根据姓名去重只保留第一个
+df=df.drop_duplicates(subset=["姓名"])
+#按分数从高到低排序
+df=df.sort_values(by="分数",ascending=False)
+#重置索引（删除旧索引）
+df=df.reset_index(drop=True)
+#新增一列：加分后 = 分数 + 10
+df["加分后"]=df["分数"]+10
+#新增一列：等级，使用 loc 条件赋值
+df.loc[df["分数"]>=600,"等级"]="优秀"
+df.loc[(df["分数"]>=500) & (df["分数"]<600),"等级"]="合格"
+df.loc[df["分数"]<500,"等级"]="不合格"
+#把专业列中的“计算机”替换成“计算机科学与技术”
+df["专业"]=df["专业"].replace("计算机","计算机科学与技术")
+#筛选出：分数 ≥ 550 并且 专业 = 计算机科学与技术
+df_1=df.loc[(df["分数"]>=550) & (df["专业"]=="计算机科学与技术")]
+#按专业分组，统计分数的 人数、平均、最高、最低
+result=df.groupby("专业")["分数"].agg([
+    "count",
+    "mean",
+    "max",
+    "min"
+])
+#取分数前 5 名学生
+top5_students=df.nlargest(5,"分数")
+#查看分数的统计信息（count、mean、max、min）
+print(df["分数"].describe())
+#修改列名：把“分数”改成“总成绩”
+df.rename(columns={"分数":"总成绩"},inplace=True)
+#删除一列（例如删除“年级”）
+#df.drop(columns=["年级"],inplace=True)
+#遍历表格，打印每一行的 姓名、总成绩、专业
+for index, row in df.iterrows():
+    print("姓名：", row["姓名"],
+          "总成绩：", row["总成绩"],
+          "专业：", row["专业"])
+#最后把处理好的表格保存为新的 Excel：最终结果.xlsx
+df.to_excel("保存后的学生信息.xlsx",index=False)
+```
