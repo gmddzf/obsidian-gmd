@@ -79,6 +79,16 @@ df.drop_duplicates(inplace=True)  # 删除所有重复行
 df.drop_duplicates(subset=["姓名"], keep="first", inplace=True)  # 按姓名去重，保留第一个
 print("去重后：")
 print(df)
+
+# 6. 删除列（重点：以删除“年级”列为例）
+# 方式1：drop()方法（最常用，推荐），inplace=True表示原地修改
+df.drop(columns=["年级"], inplace=True)
+# 方式2：del关键字（简单直接，适合单个列删除）
+# del df["年级"]
+# 方式3：删除多列（示例，可搭配使用）
+# df.drop(columns=["年级", "性别"], inplace=True)
+print("删除“年级”列后：")
+print(df)
 ```
 
 ### 四、数据统计与分析
