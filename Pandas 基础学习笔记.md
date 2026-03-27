@@ -93,7 +93,7 @@ result=df.groupby("专业")["分数"].agg([
 print("按专业分组统计：")
 print(result)
 
-#3. 取前三名
+#3. 取前五名
 top5_students = df.nlargest(5, "分数") 
 # 取分数前5名，5是数量，"分数"是排序列
 ```
