@@ -254,7 +254,8 @@ ls data/
 cat data/movies_sample.csv | head -1
 
 # 4. 查看ratings.csv的行数（使用wc命令）
-wc data/ratings.csv | shape -l
+wc -l data/ratings.csv
+#`-l` = line（行）的缩写 只统计文件有多少行
 ```
 
 **B. Python代码部分**（写出完整代码）
@@ -262,9 +263,9 @@ wc data/ratings.csv | shape -l
 import pandas as pd
 
 # 1. 加载电影数据
-movies_df = ________('data/movies_sample.csv')
+movies_df = pd.read_csv('data/movies_sample.csv')
 print("电影数据前5行：")
-print(movies_df.________(5))
+print(movies_df.head(5))
 
 # 2. 查看电影数据维度
 print(f"电影数据维度：{movies_df.________}")
