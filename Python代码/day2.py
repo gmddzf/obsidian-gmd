@@ -8,3 +8,6 @@ print(first_10)
 print("\n" + "="*50 + "\n")
 rows_30_to_40=df.iloc[29:40]
 print(rows_30_to_40)
+print("\n" + "="*50 + "\n")
+row_6=df.iloc[5]
+print(row_6)
