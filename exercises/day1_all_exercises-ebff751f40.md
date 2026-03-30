@@ -101,43 +101,43 @@ print(ratings_df.head(10))  # 填入方法名和参数
 **练习5**：探索目录结构
 ```bash
 # 1. 查看当前所在目录
-________
+ls
 
 # 2. 列出当前目录下所有文件和文件夹（详细格式）
-________ -l
+ls -l
 
 # 3. 查看data目录下的内容
-________ data/
+ls data/
 
 # 4. 查看data目录下所有文件（包括隐藏文件）
-________ -a data/
+ls -a data/
 ```
 
 **练习6**：查看文件内容
 ```bash
 # 1. 查看movies_sample.csv文件的全部内容
-________ data/movies_sample.csv
+cat data/movies_sample.csv
 
 # 2. 仅查看movies_sample.csv文件的前3行（使用管道）
-________ data/movies_sample.csv | ________ -3
+cat data/movies_sample.csv | head -3
 
 # 3. 仅查看ratings.csv文件的最后2行
-________ data/ratings.csv | ________ -2
+cat data/ratings.csv | tail -2
 ```
 
 **练习7**：路径操作
 ```bash
 # 1. 切换到data目录
-________ data/
+cd data/
 
 # 2. 查看当前目录（确认已进入data目录）
-________
+pwd
 
 # 3. 查看当前目录下的movies_sample.csv文件（使用相对路径）
-________ ./movies_sample.csv | head -1
+cat ./movies_sample.csv | head -1
 
 # 4. 返回上级目录
-________ ..
+cd ..
 ```
 
 ---
