@@ -67,3 +67,5 @@ ratings_df = ___pd.read_csv_____('data/_____ratings___.csv')
 # 查看评分数据的前10行
 print(ratings_df.____head____(____10____))
 ```
+
+#
