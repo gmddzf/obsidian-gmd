@@ -245,16 +245,16 @@ print(f"平均评分为：{average_rating:.2f}")
 **A. Linux命令部分**（写出具体命令）
 ```bash
 # 1. 查看当前目录
-________
+pwd
 
 # 2. 列出data目录内容
-________ data/
+ls data/
 
 # 3. 查看movies_sample.csv的表头（第一行）
-________ data/movies_sample.csv | ________ -1
+cat data/movies_sample.csv | head -1
 
 # 4. 查看ratings.csv的行数（使用wc命令）
-________ data/ratings.csv | ________ -l
+wc data/ratings.csv | shape -l
 ```
 
 **B. Python代码部分**（写出完整代码）
