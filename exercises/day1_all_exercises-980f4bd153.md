@@ -198,7 +198,7 @@ movies_df = pd.read_csv('data/movies_sample.csv')  # 补全
 
 # 任务2：统计电影数量
 # 提示：DataFrame的.shape属性返回(行数, 列数)
-movie_count = movies_df.shape  # 补全获取行数
+movie_count = movies_df.shape[0]  # 补全获取行数
 print(f"电影数据集中共有{movie_count}部电影")
 
 # 任务3：找出评分最高的5部电影
