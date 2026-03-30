@@ -79,6 +79,7 @@ print(row_15)
 print("\n" + "="*50 + "\n")
 
 # 4. 选择特定列（第1列和第3列）
+# df.iloc[ 行 , 列 ] 没有逗号 = 只选行！
 # 语法：df.iloc[行选择, 列选择]
 # 列索引：0=第1列(movieId), 1=第2列(title), 2=第3列(genres), 3=第4列(rating)
 cols_1_and_3 = df.iloc[:, [0, 2]]  # 所有行，第1列和第3列
