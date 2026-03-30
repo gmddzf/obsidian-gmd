@@ -194,16 +194,16 @@ cat /home/user/data/movies_sample.csv | head -1
 import pandas as pd
 
 # 任务1：加载电影数据文件
-movies_df = ________('data/movies_sample.csv')  # 补全
+movies_df = pd.read_csv('data/movies_sample.csv')  # 补全
 
 # 任务2：统计电影数量
 # 提示：DataFrame的.shape属性返回(行数, 列数)
-movie_count = ________  # 补全获取行数
+movie_count = movies_df.shape  # 补全获取行数
 print(f"电影数据集中共有{movie_count}部电影")
 
 # 任务3：找出评分最高的5部电影
 # 提示：使用.sort_values()方法按rating列降序排序
-top_movies = movies_df.________(by='________', ascending=________)  # 补全
+top_movies = movies_df.sort_values(by='rating', ascending=Fales)  # 补全
 print("评分最高的5部电影：")
 print(top_movies[________].head(5))  # 补全：选择title和rating列
 
