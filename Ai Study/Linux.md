@@ -89,3 +89,19 @@ cat data/movies_sample.csv | tail -3
 - 准确指定文件位置，避免"文件找不到"错误
 - 在脚本和程序中使用正确路径
 - 理解文件系统结构
+### 相关命令示例
+```bash
+# 查看当前目录（print working directory）
+# pwd /piː dʌbəl juː diː/
+pwd
+
+# 切换目录（change directory）
+# cd /siː diː/
+cd data/          # 进入data目录
+cd ..             # 返回上级目录
+cd ~              # 回到家目录
+
+# 用相对路径查看文件
+cat ./data/movies_sample.csv  # 从当前目录开始
+cat ../data/movies_sample.csv # 从上级目录开始
+```
