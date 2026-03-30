@@ -68,32 +68,32 @@
 import pandas as pd
 
 # 读取电影数据文件（data/movies_sample.csv）
-movies_df = ________('data/movies_sample.csv')  # 填入函数名
+movies_df = pd.read_csv('data/movies_sample.csv')  # 填入函数名
 
 # 查看前5行数据
-print(movies_df.________())  # 填入方法名
+print(movies_df.head(5))  # 填入方法名
 ```
 
 **练习2**：查看数据维度
 ```python
 # 接续上面的代码
 # 查看movies_df有多少行、多少列
-print("数据维度：", movies_df.________)  # 填入属性名
+print("数据维度：", movies_df.shape)  # 填入属性名
 ```
 
 **练习3**：自定义查看行数
 ```python
 # 查看movies_df的前3行
-print(movies_df.________(________))  # 填入方法名和参数
+print(movies_df.head(3))  # 填入方法名和参数
 ```
 
 **练习4**：加载评分数据并查看
 ```python
 # 读取评分数据文件
-ratings_df = ________('data/________.csv')  # 填入函数名和文件名
+ratings_df = pd.read_csv('data/tatings.csv')  # 填入函数名和文件名
 
 # 查看评分数据的前10行
-print(ratings_df.________(________))  # 填入方法名和参数
+print(ratings_df.head(10))  # 填入方法名和参数
 ```
 
 ### 下午练习：Linux命令补全
@@ -101,16 +101,16 @@ print(ratings_df.________(________))  # 填入方法名和参数
 **练习5**：探索目录结构
 ```bash
 # 1. 查看当前所在目录
-________
+pwd
 
 # 2. 列出当前目录下所有文件和文件夹（详细格式）
-________ -l
+ls -l
 
 # 3. 查看data目录下的内容
-________ data/
+ls data/
 
 # 4. 查看data目录下所有文件（包括隐藏文件）
-________ -a data/
+ls -a data/
 ```
 
 **练习6**：查看文件内容
