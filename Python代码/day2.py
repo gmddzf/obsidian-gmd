@@ -5,3 +5,6 @@ print(df.head(5))
 print("\n" + "="*50 + "\n")
 first_10=df.iloc[0:10]
 print(first_10)
+print("\n" + "="*50 + "\n")
+rows_30_to_40=df.iloc[29:40]
+print(rows_30_to_40)
