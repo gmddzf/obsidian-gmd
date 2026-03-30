@@ -116,28 +116,28 @@ ls -a data/
 **练习6**：查看文件内容
 ```bash
 # 1. 查看movies_sample.csv文件的全部内容
-________ data/movies_sample.csv
+cat data/movies_sample.csv
 
 # 2. 仅查看movies_sample.csv文件的前3行（使用管道）
-________ data/movies_sample.csv | ________ -3
+cat data/movies_sample.csv | head -3
 
 # 3. 仅查看ratings.csv文件的最后2行
-________ data/ratings.csv | ________ -2
+cat data/ratings.csv | tail -2
 ```
 
 **练习7**：路径操作
 ```bash
 # 1. 切换到data目录
-________ data/
+cd data/
 
 # 2. 查看当前目录（确认已进入data目录）
-________
+pwd
 
 # 3. 查看当前目录下的movies_sample.csv文件（使用相对路径）
-________ ./movies_sample.csv | head -1
+cat ./movies_sample.csv | head -1
 
 # 4. 返回上级目录
-________ ..
+cd ..
 ```
 
 ---
@@ -161,22 +161,21 @@ ________ ..
 **请写出完整的命令序列**：
 ```bash
 # 步骤1：查看当前所在目录（显示完整路径）
-________
-
+pwd
 # 步骤2：列出data目录下的所有文件（详细格式）
-________ -l data/
+ls -l data/
 
 # 步骤3：查看movies_sample.csv文件的前5行（使用管道）
-________ data/movies_sample.csv | ________ -5
+cat data/movies_sample.csv | head -5
 
 # 步骤4：查看ratings.csv文件的最后2行（使用管道）
-________ data/ratings.csv | ________ -2
+cat data/ratings.csv | tail -2
 
 # 步骤5：假设当前在项目根目录，用绝对路径查看movies_sample.csv的第一行
 # 提示：先用pwd获取当前绝对路径，然后拼接/data/movies_sample.csv
 # 例如：如果pwd返回/home/user/project，则绝对路径为/home/user/project/data/movies_sample.csv
 # 请写出查看第一行的命令（使用你获得的绝对路径）
-________ /________/________/data/movies_sample.csv | ________ -1
+cat /home/user/data/movies_sample.csv | head -1
 ```
 
 ### 问题2：Pandas数据分析任务
