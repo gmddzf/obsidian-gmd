@@ -105,3 +105,20 @@ cd ~              # 回到家目录
 cat ./data/movies_sample.csv  # 从当前目录开始
 cat ../data/movies_sample.csv # 从上级目录开始
 ```
+# `wc` 命令的全称是 **word count**（单词计数）
+它最初是用来统计文本的**单词数**，现在也可以统计：
+
+- `-l`：行数（line count）
+- `-w`：单词数（word count）
+- `-c`：字节数（byte count）
+- `-m`：字符数（character count）
+- ```bash
+# 1. 统计movies_sample.csv有多少行
+# wc /dʌbəl juː siː/ word count（单词统计）
+# -l 参数表示统计行数（line）
+wc -l data/movies_sample.csv
+
+# 2. 查看文件大小（human readable格式）
+# -h 参数表示人类可读（human-readable）
+ls -lh data/movies_sample.csv
+```
