@@ -203,12 +203,12 @@ print(f"电影数据集中共有{movie_count}部电影")
 
 # 任务3：找出评分最高的5部电影
 # 提示：使用.sort_values()方法按rating列降序排序
-top_movies = movies_df.sort_values(by='rating', ascending=Fales)  # 补全
+top_movies = movies_df.sort_values(by='rating', ascending=False)  # 补全
 print("评分最高的5部电影：")
-print(top_movies[________].head(5))  # 补全：选择title和rating列
+print(top_movies["titlr","reting"].head(5))  # 补全：选择title和rating列
 
 # 任务4：计算平均评分
-average_rating = movies_df['rating'].________()  # 补全
+average_rating = movies_df['rating'].mean()  # 补全
 print(f"平均评分为：{average_rating:.2f}")
 ```
 
