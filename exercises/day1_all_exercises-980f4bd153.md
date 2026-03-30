@@ -258,6 +258,7 @@ wc -l data/ratings.csv
 #`-l` = line（行）的缩写 只统计文件有多少行
 ```
 
+
 **B. Python代码部分**（写出完整代码）
 ```python
 import pandas as pd
@@ -268,15 +269,15 @@ print("电影数据前5行：")
 print(movies_df.head(5))
 
 # 2. 查看电影数据维度
-print(f"电影数据维度：{movies_df.________}")
+print(f"电影数据维度：{movies_df.shape________}")
 
 # 3. 加载评分数据  
-ratings_df = ________('data/________.csv')
+ratings_df = ____pd.read_csv____('data/_____ratings___.csv')
 print("\\n评分数据前3行：")
-print(ratings_df.________(3))
+print(ratings_df.____head____(3))
 
 # 4. 查看评分数据维度
-print(f"评分数据维度：{ratings_df.________}")
+print(f"评分数据维度：{ratings_df.____shape____}")
 ```
 
 **C. 思考题**（简要回答）
