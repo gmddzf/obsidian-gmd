@@ -435,4 +435,14 @@ logs/
 '''
 # 移动部署日志
 mv deploy.log logs/$(date +%Y)/$(date +%m)/deploy_$(date +%Y%m%d).log
+#自动把日志文件，移动到按 “年 / 月” 分类的文件夹里，并且自动加上今天日期改名！
+```
+### 4. **数据文件管道**
+```bash
+# 创建数据处理目录结构
+mkdir -p data/{raw,processed,cleaned}
+
+# 移动原始数据
+cp user_upload.csv data/raw/
+mv data/raw/user_upload.csv data/processed/input_data.csv
 ```
