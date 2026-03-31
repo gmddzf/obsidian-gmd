@@ -244,4 +244,14 @@ mv data_backup/ archive/old_data/
 1. **覆盖风险**：如果目标文件已存在，`mv`会**直接覆盖**而不警告
 2. **`-i`参数**：使用`mv -i`会在覆盖前询问确认
 3. **文件位置变化**：移动后，原位置的文件将不存在
+### 实际应用场景
+假设你生成了一个处理后的文件high_rating_movies.csv
+```bash
+# 移动到processed目录
+mkdir -p processed
+mv high_rating_movies.csv processed/
+
+# 或者重命名为更有意义的名字
+mv processed/high_rating_movies.csv processed/高分电影数据.csv
+```
 # mkdir(make directory) 创建目录
