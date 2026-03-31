@@ -255,4 +255,18 @@ mv high_rating_movies.csv processed/
 mv processed/high_rating_movies.csv processed/高分电影数据.csv
 ```
 # mkdir(make directory) 创建目录
+### 最小命令示例
+```bash
+# 创建单个目录
+mkdir processed
 
+# 创建多级目录（使用-p参数自动创建父目录）
+mkdir -p project/data
+mkdir -p project/src
+mkdir -p project/models
+
+# 创建带有空格的目录名（需要引号）
+mkdir "my project"
+# 或使用下划线避免空格问题（推荐）
+mkdir my_project
+```
