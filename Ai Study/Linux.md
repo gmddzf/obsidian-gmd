@@ -327,11 +327,11 @@ mkdir my_ai_project
 mkdir -p my_ai_project/{data,src,models,logs,config,docs}
 
 # 3. 在data目录下创建raw和processed子目录
-
+mkdir -p my_ai_project/data/{raw,processed}
 
 # 4. 将原始数据复制到raw目录
-
+cp data/movies_sample.csv my_ai_project/data/raw/
 
 # 5. 查看完整项目结构
-   # 或使用tree命令
+ls -R my_ai_project/   # 或使用tree命令
 ```
