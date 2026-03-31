@@ -84,5 +84,5 @@ action_high_rating = df[(df['genres'].str.contains('Action)) & (df['rating'] > 3
 #三、多条件组合（或运算）
 # 使用 | 符号连接多个条件
 comedy_or_animation = df[(df['genres'].str.contains('Comedy')) | (df['genres].str.contains('Animation'))]
-#xi'ji
+#
 ```
