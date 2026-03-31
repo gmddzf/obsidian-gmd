@@ -295,3 +295,12 @@ ls -R ai_project/
 ls -r ai_project/
 #结果反过来排序，不递归（小写 r）
 ```
+### 练习1
+```bash
+# 1. 为原始电影数据创建备份文件
+cp date/movies_sample.csv date/movies_bakeup.csv
+# 2. 复制评分文件到backups目录（先创建backups目录）
+
+# 3. 验证复制结果：查看backups目录内容
+
+```
