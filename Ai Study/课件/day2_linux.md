@@ -208,7 +208,7 @@ tree ai_project/  # 如果没有tree命令，可以用 ls -R ai_project/
 确保你已准备好：
 1. Linux终端（或Windows的WSL/Mac的Terminal）
 2. 数据文件：`data/movies_sample.csv`和`data/ratings.csv`
-
+	
 ### 练习1：文件备份与复制
 ```bash
 # 1. 为原始电影数据创建备份文件
