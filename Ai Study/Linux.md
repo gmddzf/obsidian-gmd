@@ -304,4 +304,17 @@ mkdir -p backups/ && cp data/ratings.csv backups/
 # 3. 验证复制结果：查看backups目录内容
 ls backups/
 ```
-### 
+### 练习2
+```bash
+# 1. 创建processed目录
+
+
+# 2. 将备份文件移动到processed目录
+
+
+# 3. 重命名移动后的文件，添加日期标记
+
+
+# 4. 查看processed目录内容
+
+```
