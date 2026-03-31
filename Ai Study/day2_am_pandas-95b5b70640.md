@@ -135,17 +135,6 @@ print(row_50_rating)
 	# 任务2答案 titles_first_20 = df.iloc[0:20, 1] print("\n任务2 - 前20部电影标题: ") print(titles_first_20) # 任务3答案 row_50_rating = df.iloc[49, 3] print("\n任务3 - 第50部电影的评分: ") print(row_50_rating)
 
 </details>
-
-<details> 
-<summary>文本换行</summary> 
-第一行文本  
-← 这里打两个空格再回车 <br> 
-
-第二行文本  
-
-第三行文本 
-
-</details>
 ## 3. 知识点2：条件筛选
 
 ### 核心概念
