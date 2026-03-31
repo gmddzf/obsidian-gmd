@@ -421,3 +421,16 @@ cp config/prod/deploy.yaml config/backups/deploy_$(date +%Y%m%d).yaml
 #运行结果：今天日期：2026年 03月 31日 星期二 18:22:22 CST
 ```
 ### 3. **日志文件管理**
+```bash
+# 按日期组织日志文件
+mkdir -p logs/$(date +%Y)/$(date +%m)
+'''
+自动创建按「年份 / 月份」分级的日志文件夹！
+命令运行后 **自动变成** 
+mkdir -p logs/2026/03
+logs/ 
+   └── 2026/ └── 03/
+
+# 移动部署日志
+mv deploy.log logs/$(date +%Y)/$(date +%m)/deploy_$(date +%Y%m%d).log
+```
