@@ -225,10 +225,6 @@ print("\n任务6 - 低评分喜剧片（共{}部）：".format(len(low_rating_co
 print(low_rating_comedy)
 ```
 
-<details>
-<summary>点击查看参考答案</summary>
-
-```python
 # 任务4答案
 mid_high_rating = df[df['rating'].between(3.5, 4.5)]
 print("任务4 - 评分3.5-4.5的电影（共{}部）：".format(len(mid_high_rating)))
