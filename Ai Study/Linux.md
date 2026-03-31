@@ -276,3 +276,22 @@ mkdir my_project
 | 无    | 创建目录，但父目录必须存在           | `mkdir newdir`   |
 | `-p` | 创建父目录（parents），不存在时自动创建 | `mkdir -p a/b/c` |
 | `-v` | 显示创建过程（verbose）         | `mkdir -v dir`   |
+### AI项目标准目录结构示例
+```bash
+# 创建典型的AI项目目录结构
+mkdir -p ai_project/data/{raw,processed}
+mkdir -p ai_project/src/{data_preprocessing,model_training}
+mkdir -p ai_project/models/{checkpoints,deployed}
+mkdir -p ai_project/logs/{training,inference}
+mkdir -p ai_project/config
+mkdir -p ai_project/docs
+
+ls ai_project/
+#只看第一层文件夹/文件,不进子目录
+
+ls -R ai_project/
+#递归显示所有层级的目录和文件（大写 R）
+
+ls -r ai_project/
+#结果反过来排序，不递归（小写 r）
+```
