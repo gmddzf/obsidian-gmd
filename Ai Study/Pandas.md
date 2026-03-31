@@ -69,5 +69,4 @@ print(ratings_df.____head____(____10____))
 ```
 
 # `.iloc[]`索引器
-
-
+[[day2_pandas.md#1. 问题引入#]]
