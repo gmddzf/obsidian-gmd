@@ -144,8 +144,8 @@ print(titles_first_20)
 # 任务3答案
 row_50_rating = df.iloc[49, 3]
 print("\n任务3 - 第50部电影的评分：")
-print(row_50_rating)
-```
+print(row_50_rating)```
+
 </details>
 
 ## 3. 知识点2：条件筛选
