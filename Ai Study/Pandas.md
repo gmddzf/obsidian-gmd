@@ -112,3 +112,18 @@ print("剧情片共{}部",format(len(drama_movies))
 - **音标**：/sɔːrt baɪ ˈvæljuːz/
 - **用途**：按照指定列的值对DataFrame进行升序或降序排列
 - **类比理解**：就像在Excel中点击列标题的排序按钮
+### 为什么要学排序？
+排序是数据整理的基础操作：
+- 找最大值/最小值（排序后看第一行或最后一行）
+- 数据分析前整理数据（如按时间顺序排列）
+- 制作排行榜（如电影评分Top 10）
+### 最小示例
+```python
+#基本升序排序（默认）
+#语法：df.sort_values(by='列名')
+sorted_by_rating_asc = df.sort_values(by='rating')
+#按照升序排序
+
+#降序排序
+# 使用 ascending=False 参数
+```
