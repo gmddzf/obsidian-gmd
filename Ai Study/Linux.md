@@ -251,7 +251,7 @@ mv data_backup/ archive/old_data/
 mkdir -p processed
 mv high_rating_movies.csv processed/
 
-# 或者重命名为更有意义的名字
+# 或者重命名为更有意义的名字c
 mv processed/high_rating_movies.csv processed/高分电影数据.csv
 ```
 # mkdir(make directory) 创建目录
