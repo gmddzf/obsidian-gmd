@@ -1,5 +1,6 @@
 [
   "obsidian-git",
   "highlightr-plugin",
-  "vscode-editor"
+  "vscode-editor",
+  "obsidian-custom-attachment-location"
 ]
