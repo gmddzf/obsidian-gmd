@@ -295,6 +295,7 @@ ls -R ai_project/
 ls -r ai_project/
 #结果反过来排序，不递归（小写 r）
 ```
+# cp、mv、mkdir练习
 ### 练习1：文件备份与复制
 ```bash
 # 1. 为原始电影数据创建备份文件
@@ -334,4 +335,27 @@ cp data/movies_sample.csv my_ai_project/data/raw/
 
 # 5. 查看完整项目结构
 ls -R my_ai_project/   # 或使用tree命令
+```
+### 练习4：实际工作流练习
+```bash
+# 场景：你刚刚完成数据分析，生成了三个文件：
+# 1. high_rating_movies.csv（高评分电影）
+# 2. comedy_ranking.csv（喜剧排行榜）
+# 3. analysis_report.txt（分析报告）
+
+# 创建这些文件（示例）
+echo "movieId,title,rating" > high_rating_movies.csv
+echo "1,示例电影,4.5" >> high_rating_movies.csv
+
+echo "movieId,title,genre,ranking" > comedy_ranking.csv
+echo "1,喜剧电影,Comedy,1" >> comedy_ranking.csv
+
+echo "数据分析报告" > analysis_report.txt
+
+# 你的任务：
+# 1. 创建analysis_results目录
+# 2. 将所有结果文件移动到该目录
+# 3. 为每个文件添加日期后缀（如_20260330.csv）
+# 4. 创建backup目录备份原始结果
+# 5. 整理后的目录结构应该清晰
 ```
