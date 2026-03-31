@@ -414,5 +414,10 @@ cp config/dev/deploy.yaml config/prod/
 # 备份关键配置
 cp config/prod/deploy.yaml config/backups/deploy_$(date +%Y%m%d).yaml
 #$() = 让系统执行一个命令，并把结果放进文件名里
-
+#$() = 把括号里命令的运行结果，拿出来用！
+#echo $(date +%Y%m%d) 自动获取今天日期 输出：20260331
+#echo $(pwd) 获取当前所在目录路径
+### 获取一个命令的结果，放进另一个命令里 这是**最强大的功能**！
+#运行结果：今天日期：2026年 03月 31日 星期二 18:22:22 CST
 ```
+### 3. **日志文件管理**
