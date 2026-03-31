@@ -163,12 +163,18 @@ df_sorted_desc=df.sort_values(by='rating',ascending=False).reset_index(drop=True
 假设你是一家流媒体平台的数据分析师，收到以下业务需求：
 ```python
 # 需求1：查看平台中间部分的电影质量（第150-160行）
-
+mid_quality=df.iloc[149:160]
+print(mid_quality)
 # 需求2：筛选出高质量动作片（评分>4.0且类型含Action）
-
+high_quality_action=df[(df['genres].str.contains('Action')) &
+(df['rating'] > 4.0)]
 # 需求3：制作不同类型的电影排行榜
 # 3.1 喜剧片排行榜（降序）
-
+comedy_desc_rank=df[df['genres'].str.contains('comedy')]
+.sort_values(by='rating',ascending=False)
+.reset_index(drop=True)
 # 3.2 动画片排行榜（降序）
-
+animation_desc_rank=df[df['genres'].str.contains('animation')]
+.sort_values(by='rating',ascending=False)
+.reset_index(drop=True)
 ```
