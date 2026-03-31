@@ -153,7 +153,9 @@ df_movieId_asc=df.sort_values(by='movieId',ascending=True)
 print(df_movieId_asc.head(15))
 # 任务8：按评分从低到高排序（升序），查看评分最低的10部电影
 # 提示：ascending=True是默认值，可以省略
-
+df_rating_asc=df.sort_values(by='rating',ascending=True)
+print(df_rating_asc.head(10))
 # 任务9：创建电影评分排行榜（降序排序），并重置索引
 # 提示：先排序，再reset_index(drop=True)
+
 ```
