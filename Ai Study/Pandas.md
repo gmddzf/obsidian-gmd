@@ -130,5 +130,9 @@ sorted_by_movies_desc = df.sort_values(by='rating',ascending=False)
 
 #多列排序
 #先按评分降序，评分相同再按movieId升序
+multi_sorted = df.sort_values(['rating','movieId'],ascending=[False,True])
 
+#排序后重置索引
+# 排序后索引会乱序，使用 reset_index() 重新编号
+sorted_reset = df.sort_values(by='rating', ascending=False).reset_index(drop=True)
 ```
