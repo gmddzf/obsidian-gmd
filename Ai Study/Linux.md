@@ -135,7 +135,7 @@ wc -l data/movies_sample.csv
 # -h 参数表示人类可读（human-readable）
 ls -lh data/movies_sample.csv
 ```
-#  🤖 OpenClaw部署场景提及
+#  🦞 OpenClaw部署场景提及
  **Linux命令在AI模型部署中的实际应用**
 当你部署AI模型（如OpenClaw龙虾部署工具）时，这些Linux命令至关重要：
 1. **`ls`检查项目结构**：
@@ -310,7 +310,7 @@ echo "1,喜剧电影,Comedy,1" >> comedy_ranking.csv
 
 echo "数据分析报告" > analysis_report.txt
 ```
-# cp、mv、mkdir练习
+# cp、mv、mkdir、echo练习
 ### 练习1：文件备份与复制
 ```bash
 # 1. 为原始电影数据创建备份文件
@@ -390,3 +390,4 @@ ls -R backup/
 # 或用tree命令（更直观） 
 tree analysis_results/ backup/
 ```
+# 🦞 OpenClaw部署场景：文件操作的实际应用
