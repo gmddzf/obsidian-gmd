@@ -145,8 +145,6 @@ print(titles_first_20)
 row_50_rating = df.iloc[49, 3]
 print("\n任务3 - 第50部电影的评分：")
 print(row_50_rating)```
-
-
 </details>
 ```
 
