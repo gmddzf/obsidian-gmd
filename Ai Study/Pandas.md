@@ -126,4 +126,9 @@ sorted_by_rating_asc = df.sort_values(by='rating')
 
 #降序排序
 # 使用 ascending=False 参数
+sorted_by_movies_desc = df.sort_values(by='rating',ascending=False)
+
+#多列排序
+#先按评分降序，评分相同再按movieId升序
+
 ```
