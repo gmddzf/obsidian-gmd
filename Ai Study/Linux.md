@@ -225,6 +225,19 @@ cp -r data/ data_backup/
 | `-r` | 递归复制目录（recursive）       | `cp -r dir1/ dir2/` |
 | `-i` | 交互模式，覆盖前询问（interactive） | `cp -i file1 file2` |
 | `-v` | 显示详细信息（verbose）         | `cp -v file1 file2` |
-
 # mv(move) 移动/重命名文件和目录
+### 最小命令示例
+```bash
+# 重命名文件：mv 旧文件名 新文件名
+mv data/movies_backup.csv data/movies_原始备份.csv
+
+# 移动文件到目录：mv 文件名 目录路径/
+mv data/movies_原始备份.csv backups/
+
+# 移动并重命名：mv 源文件 目标目录/新文件名
+mv data/ratings.csv processed/电影评分数据.csv
+
+# 移动整个目录
+mv data_backup/ archive/old_data/
+```
 # mkdir(make directory) 创建目录
