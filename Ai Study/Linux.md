@@ -295,7 +295,7 @@ ls -R ai_project/
 ls -r ai_project/
 #结果反过来排序，不递归（小写 r）
 ```
-### 练习1
+### 练习1：文件备份与复制
 ```bash
 # 1. 为原始电影数据创建备份文件
 cp data/movies_sample.csv data/movies_backup.csv
@@ -304,7 +304,7 @@ mkdir -p backups/ && cp data/ratings.csv backups/
 # 3. 验证复制结果：查看backups目录内容
 ls backups/
 ```
-### 练习2
+### 练习2：文件移动与重命名
 ```bash
 # 1. 创建processed目录
 mkdir processed/
@@ -316,5 +316,22 @@ mv backups/movies_sample_backup.csv processed/
 mv processed/movies_sample_backup.csv processed/movies_20260330.csv
 
 # 4. 查看processed目录内容
-ls -r processed/
+ls processed/
+```
+### 练习3：创建标准项目结构
+```bash
+# 1. 创建my_ai_project目录
+mkdir my_ai_project
+
+# 2. 在项目内创建标准子目录结构
+mkdir -p my_ai_project/{data,src,models,logs,config,docs}
+
+# 3. 在data目录下创建raw和processed子目录
+
+
+# 4. 将原始数据复制到raw目录
+
+
+# 5. 查看完整项目结构
+   # 或使用tree命令
 ```
