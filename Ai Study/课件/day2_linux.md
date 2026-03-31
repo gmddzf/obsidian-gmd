@@ -81,12 +81,12 @@ cp -r data/ data_backup/
 ```
 
 ### 命令参数说明
-| 参数 | 用途 | 示例 |
-|------|------|------|
-| 无 | 基本文件复制 | `cp file1 file2` |
-| `-r` | 递归复制目录（recursive） | `cp -r dir1/ dir2/` |
+| 参数   | 用途                      | 示例                  |
+| ---- | ----------------------- | ------------------- |
+| 无    | 基本文件复制                  | `cp file1 file2`    |
+| `-r` | 递归复制目录（recursive）       | `cp -r dir1/ dir2/` |
 | `-i` | 交互模式，覆盖前询问（interactive） | `cp -i file1 file2` |
-| `-v` | 显示详细信息（verbose） | `cp -v file1 file2` |
+| `-v` | 显示详细信息（verbose）         | `cp -v file1 file2` |
 
 ### 预期输出示例
 运行`cp data/movies_sample.csv data/movies_backup.csv`，然后用`ls data/`查看：

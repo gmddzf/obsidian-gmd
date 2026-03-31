@@ -206,10 +206,25 @@ ls -lh data/movies_sample.csv
 4. **每日复习**：明天开始前，花5分钟练习今天学过的命令
 5. **实际应用**：在自己的项目中使用这些命令，加深记忆
 
-# **记住**：优秀的AI工程师必须熟悉Linux环境，这是后续学习深度学习、模型部署的基础。
-_教学文档生成时间：2026-03-30 11:15_
-_设计理念：问题驱动、单命令教学、英语支持、掌握验证、部署场景结合_
-**知识连续性提醒**：明天学习开始前，请先复习今天上午的Pandas函数和下午的Linux命令，完成快速问答或重写关键代码片段。
 # cp(copy) 复制文件和目录
+### 最小命令示例
+```bash
+#复制单个文件：cp源文件 目标文件
+cp date/movies_sample.csv date/movies_backup.csv
+
+#复制文件到指定目录：cp 源文件 目标目录
+cp data/movies_sample.csv backups/
+
+# 复制整个目录（递归复制）：cp -r 源目录 目标目录
+cp -r data/ data_backup/
+```
+### 命令参数说明
+| 参数   | 用途                      | 示例                  |
+| ---- | ----------------------- | ------------------- |
+| 无    | 基本文件复制                  | `cp file1 file2`    |
+| `-r` | 递归复制目录（recursive）       | `cp -r dir1/ dir2/` |
+| `-i` | 交互模式，覆盖前询问（interactive） | `cp -i file1 file2` |
+| `-v` | 显示详细信息（verbose）         | `cp -v file1 file2` |
+
 # mv(move) 移动/重命名文件和目录
 # mkdir(make directory) 创建目录
