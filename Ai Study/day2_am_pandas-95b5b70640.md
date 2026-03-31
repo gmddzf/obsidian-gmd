@@ -130,11 +130,12 @@ print(row_50_rating)
 <summary>点击查看参考答案</summary>
 
 ```python
-# 任务1答案 middle_rows = df.iloc[99:110] print("任务1 - 第100-110行: ") print(middle_rows) # 任务2答案 titles_first_20 = df.iloc[0:20, 1] print("\n任务2 - 前20部电影标题: ") print(titles_first_20) # 任务3答案 row_50_rating = df.iloc[49, 3] print("\n任务3 - 第50部电影的评分: ") print(row_50_rating)
-
+# 任务1答案 middle_rows = df.iloc[99:110] 
+print("任务1 - 第100-110行: ") 
+print(middle_rows) 
+# 任务2答案 titles_first_20 = df.iloc[0:20, 1] print("\n任务2 - 前20部电影标题: ") print(titles_first_20) # 任务3答案 row_50_rating = df.iloc[49, 3] print("\n任务3 - 第50部电影的评分: ") print(row_50_rating)
 ```
-
-
+</details>
 ## 3. 知识点2：条件筛选
 
 ### 核心概念
