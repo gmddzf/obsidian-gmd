@@ -140,3 +140,20 @@ sorted_reset = df.sort_values(by='rating', ascending=False).reset_index(drop=Tru
 1. **原地排序**：可以使用 `inplace=True` 参数直接修改原DataFrame
 2. **缺失值处理**：默认NaN会被放在排序结果的最后
 3. **性能考虑**：大数据集排序可能较慢，考虑是否需要全部排序
+```python
+#原地排序示例（会修改原df，谨慎使用）
+df_copy=df.copy()#创建副本，以防影响后续操作
+df_copy=sort_values(by='rating',ascending=False,inplace=True)
+```
+### 动手练习3：排序实战
+```python
+# 任务7：按电影ID（movieId）升序排序，查看排序后的前15部电影
+# 提示：使用sort_values，by参数指定'movieId'
+df_movieId_asc=df.sort_values(by='movieId',ascending=True)
+print(df_movieId_asc.head(15))
+# 任务8：按评分从低到高排序（升序），查看评分最低的10部电影
+# 提示：ascending=True是默认值，可以省略
+
+# 任务9：创建电影评分排行榜（降序排序），并重置索引
+# 提示：先排序，再reset_index(drop=True)
+```
