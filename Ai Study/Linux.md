@@ -298,6 +298,18 @@ ls -r ai_project/
 # echo 新建文件 + 往里面写字
 1. **`>` 等于：覆盖创建**（新建文件，写内容）
 2. **`>>` 等于：追加一行**（在文件下面再加一行）
+3. - **`>`** = 如果文件已经有内容 → **覆盖清空，重写**
+4. **`>>`** = 如果文件已经有内容 → **在下面加一行，不删原来的**
+```bash
+echo "movieId,title,rating" > high_rating_movies.csv
+#创建一个叫 **high_rating_movies.csv** 的文件,里面写第一行`movieId,title,rating`
+echo "1,示例电影,4.5" >> high_rating_movies.csv
+#在刚才那个文件**下面再加一行**：`1,示例电影,4.5`
+echo "movieId,title,genre,ranking" > comedy_ranking.csv
+echo "1,喜剧电影,Comedy,1" >> comedy_ranking.csv
+
+echo "数据分析报告" > analysis_report.txt
+```
 # cp、mv、mkdir练习
 ### 练习1：文件备份与复制
 ```bash
