@@ -145,7 +145,7 @@ sorted_reset = df.sort_values(by='rating', ascending=False).reset_index(drop=Tru
 df_copy=df.copy()#创建副本，以防影响后续操作
 df_copy=sort_values(by='rating',ascending=False,inplace=True)
 ```
-### 动手练习3：排序实战
+### 动手练习：排序实战
 ```python
 # 任务7：按电影ID（movieId）升序排序，查看排序后的前15部电影
 # 提示：使用sort_values，by参数指定'movieId'
@@ -157,5 +157,18 @@ df_rating_asc=df.sort_values(by='rating',ascending=True)
 print(df_rating_asc.head(10))
 # 任务9：创建电影评分排行榜（降序排序），并重置索引
 # 提示：先排序，再reset_index(drop=True)
+df_sorted_desc=df.sort_values(by='rating',ascending=False).reset_index(drop=True)
+```
+### 综合练习：电影数据分析师任务
+假设你是一家流媒体平台的数据分析师，收到以下业务需求：
+```python
+# 需求1：查看平台中间部分的电影质量（第150-160行）
+
+# 需求2：筛选出高质量动作片（评分>4.0且类型含Action）
+
+# 需求3：制作不同类型的电影排行榜
+# 3.1 喜剧片排行榜（降序）
+
+# 3.2 动画片排行榜（降序）
 
 ```
