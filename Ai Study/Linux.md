@@ -403,3 +403,14 @@ cp model_v2.pt models/v2/
 cp best_model.pt models/latest/
 ```
 ### 2. **配置文件组织**
+```bash
+# 创建标准配置目录
+mkdir -p config/{dev,prod,test}
+
+# 移动并重命名配置文件
+mv temp_config.yaml config/dev/deploy.yaml
+cp config/dev/deploy.yaml config/prod/
+
+# 备份关键配置
+cp config/prod/deploy.yaml config/backups/deploy_$(date +%Y%m%d).yaml
+```
