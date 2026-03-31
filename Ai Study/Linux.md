@@ -307,14 +307,14 @@ ls backups/
 ### 练习2
 ```bash
 # 1. 创建processed目录
-
+mkdir processed/
 
 # 2. 将备份文件移动到processed目录
-
+mv backups/movies_sample_backup.csv processed/
 
 # 3. 重命名移动后的文件，添加日期标记
-
+mv processed/movies_sample_backup.csv processed/movies_20260330.csv
 
 # 4. 查看processed目录内容
-
+ls -r processed/
 ```
