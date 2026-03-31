@@ -91,5 +91,18 @@ print("动作片且评分>3.5的电影（共{}部）：".format(len(action_high_
 
 #四、范围筛选（between）
 # 筛选评分在某个范围内的电影
+mid_rating_movies = df[df['rating'].between(3.0,4.0)]
+#评分在3.0-4.0之间的电影
 
+#五、字符串包含筛选（contains）
+# 筛选类型中包含特定关键词的电影
+drama_movies = df[df['genres'].str.contains('Drama')]
+print("剧情片共{}部",format(len(drama_movies))
+#剧情片共几部
 ```
+<details>
+<summary>条件筛选的底层逻辑</summary>
+1.<strong> df['rating'] > 4.0</strong> &nbsp会产生一个布尔序列（长度和DataFrame行数相同）<br>
+2. 每个位置是True或False，表示该行是否满足条件<br>
+3. <strong>df[布尔序列]</strong> 只保留True对应的行<br>
+</details>
