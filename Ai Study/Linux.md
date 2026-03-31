@@ -446,3 +446,23 @@ mkdir -p data/{raw,processed,cleaned}
 cp user_upload.csv data/raw/
 mv data/raw/user_upload.csv data/processed/input_data.csv
 ```
+### 实际部署工作流示例
+假设你要部署OpenClaw情感分析模型：
+```bash
+# 1. 创建部署目录结构
+mkdir -p openclaw_deployment/{models,config,data,logs,scripts}
+
+# 2. 准备模型文件
+cp trained_model.pt openclaw_deployment/models/sentiment_model.pt
+cp -r tokenizer/ openclaw_deployment/models/
+
+# 3. 整理配置文件
+mv config.yaml openclaw_deployment/config/production.yaml
+cp openclaw_deployment/config/production.yaml openclaw_deployment/config/backup/
+
+# 4. 准备数据文件
+cp test_data.csv openclaw_deployment/data/input.csv
+
+# 5. 查看最终结构
+tree openclaw_deployment/
+```
