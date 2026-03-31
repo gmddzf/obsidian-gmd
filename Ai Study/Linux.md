@@ -369,8 +369,24 @@ echo "数据分析报告" > analysis_report.txt
 
 # 你的任务：
 # 1. 创建analysis_results目录
+mkdir -p analysis_results/
 # 2. 将所有结果文件移动到该目录
+mv high_rating_movies.csv comedy_ranking.csv analysis_report.txt analysis_results/
 # 3. 为每个文件添加日期后缀（如_20260330.csv）
+mv analysis_results/high_rating_movies.csv analysis_results/high_rating_movies_20260330.csv
+mv analysis_results/comedy_ranking.csv analysis_results/comedy_ranking_20260330.csv
+mv analysis_results/analysis_report.txt analysis_results/analysis_report_20260330.txt
 # 4. 创建backup目录备份原始结果
+mkdir backup/ && cp -r analysis_results/ backup/
+'''
+cp 文件 目的地 → 不用 -r
+cp 文件夹 目的地 → 必须加 -r（递归复制）
+'''
 # 5. 整理后的目录结构应该清晰
+# 查看analysis_results目录 
+ls analysis_results/ 
+# 查看backup目录结构 
+ls -R backup/ 
+# 或用tree命令（更直观） 
+tree analysis_results/ backup/
 ```
