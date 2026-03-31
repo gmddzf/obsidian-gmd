@@ -70,7 +70,7 @@ print(ratings_df.____head____(____10____))
 
 # `.iloc[]`索引器
 [[day2_pandas.md#1. 问题引入#]]
-# 知识点2：条件筛选 df[条件表达式]
+# 条件筛选 df[条件表达式]
 [为什么要学条件筛选？](day2_pandas.md#为什么要学条件筛选？)
 ```python
 #一、筛选评分大于4.0的电影
@@ -106,3 +106,9 @@ print("剧情片共{}部",format(len(drama_movies))
 2. <span style="color:red">每个位置是True或False，表示该行是否满足条件</span><br>
 3. <strong>df[布尔序列]</strong> 只保留True对应的行<br>
 </details>
+# .sort_values()排序
+## 核心概念
+- **中文**：按值排序（sort by values）
+- **音标**：/sɔːrt baɪ ˈvæljuːz/
+- **用途**：按照指定列的值对DataFrame进行升序或降序排列
+- **类比理解**：就像在Excel中点击列标题的排序按钮

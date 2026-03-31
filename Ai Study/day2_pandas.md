@@ -239,8 +239,6 @@ print(children_or_fantasy.head())
 low_rating_comedy = df[(df['rating'] < 3.0) & (df['genres'].str.contains('Comedy'))]
 print("\n任务6 - 低评分喜剧片（共{}部）：".format(len(low_rating_comedy)))
 print(low_rating_comedy)
-```
-</details>
 
 ## 4. 知识点3：`.sort_values()`排序
 
