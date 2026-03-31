@@ -136,3 +136,7 @@ multi_sorted = df.sort_values(['rating','movieId'],ascending=[False,True])
 # 排序后索引会乱序，使用 reset_index() 重新编号
 sorted_reset = df.sort_values(by='rating', ascending=False).reset_index(drop=True)
 ```
+### 排序的注意事项
+1. **原地排序**：可以使用 `inplace=True` 参数直接修改原DataFrame
+2. **缺失值处理**：默认NaN会被放在排序结果的最后
+3. **性能考虑**：大数据集排序可能较慢，考虑是否需要全部排序
