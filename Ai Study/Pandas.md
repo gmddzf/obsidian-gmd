@@ -77,5 +77,6 @@ print(ratings_df.____head____(____10____))
 high_rating_movies = df[df['rating'] > 4.0]
 # 2. 多条件组合（与运算）
 # 使用 & 符号连接多个条件，每个条件要用括号括起来
-action_high_rating = df[(df['genres'].str.contains('Action))]
+action_high_rating = df[(df['genres'].str.contains('Action)) & (df['rating'] > 3.5)]
+#选择评分大于3.5的武打片
 ```
