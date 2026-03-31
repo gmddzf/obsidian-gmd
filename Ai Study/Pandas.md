@@ -69,9 +69,9 @@ print(ratings_df.____head____(____10____))
 ```
 
 # `.iloc[]`索引器
-[[day2_pandas.md#1. 问题引入#]]
+[[课件/day2_pandas#1. 问题引入#]]
 # 条件筛选 df[条件表达式]
-[为什么要学条件筛选？](day2_pandas.md#为什么要学条件筛选？)
+[为什么要学条件筛选？](课件/day2_pandas.md#为什么要学条件筛选？)
 ```python
 #一、筛选评分大于4.0的电影
 high_rating_movies = df[df['rating'] > 4.0]
