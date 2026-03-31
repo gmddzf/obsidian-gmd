@@ -391,3 +391,15 @@ ls -R backup/
 tree analysis_results/ backup/
 ```
 # 🦞 OpenClaw部署场景：文件操作的实际应用
+### 1. **模型文件管理**
+```bash
+# 部署前备份原始模型
+cp model.pt model_backup.pt
+
+# 整理不同版本的模型
+mkdir -p models/{v1,v2,latest}
+cp model.pt models/v1/
+cp model_v2.pt models/v2/
+cp best_model.pt models/latest/
+```
+### 2. **配置文件组织**
