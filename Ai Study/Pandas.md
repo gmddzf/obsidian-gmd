@@ -73,10 +73,15 @@ print(ratings_df.____head____(____10____))
 # 知识点2：条件筛选 df[条件表达式]
 [为什么要学条件筛选？](day2_pandas.md#为什么要学条件筛选？)
 ```python
-#筛选评分大于4.0的电影
+#一、筛选评分大于4.0的电影
 high_rating_movies = df[df['rating'] > 4.0]
-# 2. 多条件组合（与运算）
+
+# 二. 多条件组合（与运算）
 # 使用 & 符号连接多个条件，每个条件要用括号括起来
 action_high_rating = df[(df['genres'].str.contains('Action)) & (df['rating'] > 3.5)]
 #选择评分大于3.5的武打片
+
+#三、多条件组合（或运算）
+# 使用 | 符号连接多个条件
+
 ```
