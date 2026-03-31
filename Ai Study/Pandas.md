@@ -103,6 +103,6 @@ print("剧情片共{}部",format(len(drama_movies))
 <details>
 <summary>条件筛选的底层逻辑</summary>
 1.<strong> df['rating'] > 4.0</strong> &nbsp会产生一个布尔序列（长度和DataFrame行数相同）<br>
-2. 每个位置是True或False，表示该行是否满足条件<br>
+2. <span style="color:red">每个位置是True或False，表示该行是否满足条件</span><br>
 3. <strong>df[布尔序列]</strong> 只保留True对应的行<br>
 </details>
