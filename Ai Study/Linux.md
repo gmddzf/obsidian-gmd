@@ -298,9 +298,9 @@ ls -r ai_project/
 ### 练习1
 ```bash
 # 1. 为原始电影数据创建备份文件
-cp date/movies_sample.csv date/movies_bakeup.csv
+cp data/movies_sample.csv data/movies_bakeup.csv
 # 2. 复制评分文件到backups目录（先创建backups目录）
-
+mkdir -p bakeups/ && cp data/retings.csv bakeups/
 # 3. 验证复制结果：查看backups目录内容
-
+ls bakeups/
 ```
