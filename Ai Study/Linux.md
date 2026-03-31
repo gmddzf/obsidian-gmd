@@ -413,4 +413,6 @@ cp config/dev/deploy.yaml config/prod/
 
 # 备份关键配置
 cp config/prod/deploy.yaml config/backups/deploy_$(date +%Y%m%d).yaml
+#$() = 让系统执行一个命令，并把结果放进文件名里
+
 ```
