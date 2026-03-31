@@ -426,11 +426,13 @@ cp config/prod/deploy.yaml config/backups/deploy_$(date +%Y%m%d).yaml
 mkdir -p logs/$(date +%Y)/$(date +%m)
 '''
 自动创建按「年份 / 月份」分级的日志文件夹！
-命令运行后 **自动变成** 
+命令运行后 自动变成:
 mkdir -p logs/2026/03
+最终创建出来的文件夹长这样:
 logs/ 
-   └── 2026/ └── 03/
-
+   └── 2026/
+         └── 03/
+'''
 # 移动部署日志
 mv deploy.log logs/$(date +%Y)/$(date +%m)/deploy_$(date +%Y%m%d).log
 ```
