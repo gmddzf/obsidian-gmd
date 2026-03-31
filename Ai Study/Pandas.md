@@ -84,5 +84,12 @@ action_high_rating = df[(df['genres'].str.contains('Action)) & (df['rating'] > 3
 #三、多条件组合（或运算）
 # 使用 | 符号连接多个条件
 comedy_or_animation = df[(df['genres'].str.contains('Comedy')) | (df['genres].str.contains('Animation'))]
-#
+#喜剧 或者 动画 的电影，全部筛选出来！
+print("动作片且评分>3.5的电影（共{}部）：".format(len(action_high_rating)))
+# `{}` 是一个占位符，表示 “这里要放一个变量的值”
+# `.format(...)` 就是把括号里的内容（这里是电影数量）填到 `{}` 的位置
+
+#四、范围筛选（between）
+# 筛选评分在某个范围内的电影
+
 ```
