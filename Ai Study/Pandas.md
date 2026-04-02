@@ -178,3 +178,4 @@ animation_desc_rank=df[df['genres'].str.contains('animation')]
 .sort_values(by='rating',ascending=False)
 .reset_index(drop=True)
 ```
+# .groupby() 按列分组
