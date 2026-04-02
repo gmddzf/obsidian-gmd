@@ -214,5 +214,30 @@ for name in list(groups.groups.keys())[:5]:
 - `groups`：是一个`DataFrameGroupBy`对象，不是普通的DataFrame
 - `groups.ngroups`：返回分组的数量（这里20种不同的类型组合）
 - `groups.groups.keys()`：返回每个分组的名称（即genres的值）
-### 动手练习1：按年份分组(拓展思考)
-**背景**：我们的数据集没有单独的年份列，但可以从`title`中提取年份（例如"Toy Story (1995)"中的1995）。
+# .agg() 聚合计算
+### 核心用途
+对每个分组（group）计算一个或多个统计量，如：
+- 平均值（mean）
+- 总和（sum）
+- 计数（count）
+- 最大值（max）、最小值（min）
+- 标准差（std）等
+
+**完整流程**：分组 → 聚合 = 分组统计
+### 为什么要学`.agg()`？
+单纯分组只是第一步，我们需要对每个组进行计算：
+- 计算每个电影类型的**平均评分**
+- 计算每个年份的**电影数量**
+- 计算每个地区的**销售总额**
+### 最小示例
+继续使用电影数据，计算每个电影类型的平均评分：
+```python
+# 知识点2：.agg() - 聚合计算
+# 先分组，再聚合
+# 按电影类型分组，对rating列计算平均值
+avg_rating_by_genre = movies_df.groupby('genres')['rating'].agg('mean')
+
+print("每个电影类型的平均评分：")
+print(avg_rating_by_genre.head(10))
+
+```
