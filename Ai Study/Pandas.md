@@ -241,3 +241,8 @@ print("每个电影类型的平均评分：")
 print(avg_rating_by_genre.head(10))
 
 ```
+**语法分解**：
+- `movies_df.groupby('genres')`：按genres分组
+- `['rating']`：只选择rating列进行后续计算（可选，如果不指定则对所有数值列计算）
+- `.agg('mean')`：对每个分组计算平均值
+- 其他常用聚合函数：`'count'`, `'sum'`, `'min'`, `'max'`, `'std'`

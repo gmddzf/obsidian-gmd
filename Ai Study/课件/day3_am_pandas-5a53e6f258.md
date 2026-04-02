@@ -229,7 +229,7 @@ Name: rating, dtype: float64
 
 1. 写出完整代码：
 ```python
-# [请在此处填写代码]
+movies_genres=movies_df.groupby(# [请在此处填写代码]
 ```
 
 2. 运行代码后，回答：哪种电影类型数量最多？数量是多少？
