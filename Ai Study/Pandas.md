@@ -319,7 +319,7 @@ print(multi_result.head(10))
 ```python
 movies_1995 = movies_df[movies_df['years'] == 1995]
 avg_rating_1955=movies_1955.group('genres')['rating'].mean
-
+high_rating_1955=avg_rating_1955.idmax()
 ```
 
 2. 计算每年（year）的电影总数：
