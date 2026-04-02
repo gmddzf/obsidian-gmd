@@ -251,4 +251,26 @@ print(avg_rating_by_genre.head(10))
 我们学会了按单列分组（如`genres`），但真实分析中经常需要：
 - 同时按年份**和**类型分组
 - 对每个分组计算多个统计量（如平均评分+电影数量）
- 
+### 多列分组
+语法：`.groupby(['列1', '列2', ...])`
+**示例**：假设我们有年份列`year`，想同时按年份和类型分组
+```python
+# 假设数据中有year列
+multi_group = movies_df.groupby(['year', 'genres'])
+```
+### 多重聚合
+语法：`.agg({'列名1': '聚合函数1', '列名2': ['聚合函数1', '聚合函数2']})`
+
+**示例**：对rating列计算平均值和最大值，对movieId列计数
+```python
+# 假设数据中有year列
+ result = movies_df.groupby(['year', 'genres']).agg({
+     'rating': ['mean', 'max'],
+     'movieId': 'count'
+ })
+```
+### 实际应用：模拟年份数据
+由于我们的数据集没有年份列，我们模拟一个简单场景：添加虚拟年份列。
+```python
+
+```
