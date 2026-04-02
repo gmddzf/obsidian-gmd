@@ -280,7 +280,36 @@ import numpy as up
 # 为前5部电影分配1995年，接着5部分配1996年，以此类推
 years = []
 for i in range(len(movies_df)):
+    if i < 5:
+        years.append(1995)
+    elif i < 10:
+        years.append(1996)
+    else:
+        years.append(1997)  # 其余分配1997年
 
+movies_df['year'] = years  # 添加新列
 
+print("添加年份列后的数据前10行：")
+print(movies_df[['title', 'genres', 'rating', 'year']].head(10))
 
+# 多列分组：同时按年份和类型分组
+multi_group = movies_df.groupby(['year', 'genres'])
+
+print("\n多列分组后的组数：", multi_group.ngroups)
+print("前5个分组名称：")
+for name in list(multi_group.groups.keys())[:5]:
+    print(f"  - {name}")
+
+# 多重聚合：计算每个（年份,类型）组的统计量
+multi_result = movies_df.groupby(['year', 'genres']).agg({
+    'rating': ['mean', 'max', 'count'],  # 平均评分、最高评分、评分数量
+    'movieId': 'count'  # 电影数量（与rating count应该一致）
+})
+
+print("\n多重聚合结果（前10行）：")
+print(multi_result.head(10))
 ```
+**关键解释**：
+1. **多列分组**：`.groupby(['year', 'genres'])`创建了二维分组，每个组由(year, genres)唯一标识
+2. **多重聚合**：可以同时对不同列应用不同聚合函数，甚至对同一列应用多个聚合函数
+3. **结果结构**：多重聚合的结果是MultiIndex的DataFrame，列有两层：第一层是原始列名，第二层是聚合函数名
