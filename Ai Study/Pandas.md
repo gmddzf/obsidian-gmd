@@ -179,3 +179,33 @@ animation_desc_rank=df[df['genres'].str.contains('animation')]
 .reset_index(drop=True)
 ```
 # .groupby() 按列分组
+### 为什么要学`.groupby()`？
+在实际数据分析中，分组是发现模式的第一步：
+- 电商分析：按商品类别统计销售额
+- 用户分析：按年龄段统计用户数量
+- 电影分析：按类型统计平均评分
+### 最小示例
+让我们先加载电影数据，然后尝试按电影类型分组：
+```python
+import pandas as pd
+
+# 加载电影数据（复习Day 1知识）
+# pd.read_csv() - 读CSV文件 (read CSV file)
+# 音标：/ˈriːd ˈsiː es ˈviː faɪl/
+movies_df = pd.read_csv('data/movies_sample.csv')
+
+# 查看数据前几行（复习Day 1知识）
+print("数据前5行：")
+print(movies_df.head())
+
+# 知识点1：.groupby() - 按列分组
+# 按电影类型（genres列）分组
+# 注意：genres列是"类型1|类型2|类型3"的格式，我们先按整个字符串分组
+groups = movies_df.groupby('genres')
+
+# 查看分组结果
+print("\n分组数量：", groups.ngroups)
+print("分组后的组名（前5个）：")
+for name in list(groups.groups.keys())[:5]:
+    print(f"  - {name}")
+```
