@@ -214,3 +214,5 @@ for name in list(groups.groups.keys())[:5]:
 - `groups`：是一个`DataFrameGroupBy`对象，不是普通的DataFrame
 - `groups.ngroups`：返回分组的数量（这里20种不同的类型组合）
 - `groups.groups.keys()`：返回每个分组的名称（即genres的值）
+### 动手练习1：按年份分组(拓展思考)
+**背景**：我们的数据集没有单独的年份列，但可以从`title`中提取年份（例如"Toy Story (1995)"中的1995）。

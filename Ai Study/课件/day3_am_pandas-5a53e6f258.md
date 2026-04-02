@@ -138,7 +138,7 @@ for name in list(groups.groups.keys())[:5]:
 
 1. 如果数据中有`year`列，写出按年份分组的代码：
 ```python
-# [请在此处填写代码]
+groups=movies_df.groupby('year')# [请在此处填写代码]
 ```
 
 2. 分组后，`groups`对象包含了什么？（多选题）
