@@ -313,3 +313,16 @@ print(multi_result.head(10))
 1. **多列分组**：`.groupby(['year', 'genres'])`创建了二维分组，每个组由(year, genres)唯一标识
 2. **多重聚合**：可以同时对不同列应用不同聚合函数，甚至对同一列应用多个聚合函数
 3. **结果结构**：多重聚合的结果是MultiIndex的DataFrame，列有两层：第一层是原始列名，第二层是聚合函数名
+**任务**：基于添加了年份列的数据，完成以下分析：
+
+4. 找出1995年平均评分最高的电影类型：
+```python
+movies_1995 = movies_df[movies_df['years'] == 1995]
+avg_rating_1955=movies_1955.group('genres')['rating'].mean
+
+```
+
+2. 计算每年（year）的电影总数：
+```python
+# [请在此处填写代码]
+```
