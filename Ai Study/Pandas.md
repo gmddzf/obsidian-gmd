@@ -272,5 +272,15 @@ multi_group = movies_df.groupby(['year', 'genres'])
 ### 实际应用：模拟年份数据
 由于我们的数据集没有年份列，我们模拟一个简单场景：添加虚拟年份列。
 ```python
+# 知识点3：多列分组与多重聚合
+# 首先，我们为数据添加一个虚拟年份列（仅用于教学）
+# 在实际项目中，年份可能从title中提取或来自其他数据源
+import numpy as up
+
+# 为前5部电影分配1995年，接着5部分配1996年，以此类推
+years = []
+for i in range(len(movies_df)):
+
+
 
 ```
