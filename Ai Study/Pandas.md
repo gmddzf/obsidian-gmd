@@ -209,3 +209,8 @@ print("分组后的组名（前5个）：")
 for name in list(groups.groups.keys())[:5]:
     print(f"  - {name}")
 ```
+**关键解释**：
+- `movies_df.groupby('genres')`：按`genres`列的值进行分组
+- `groups`：是一个`DataFrameGroupBy`对象，不是普通的DataFrame
+- `groups.ngroups`：返回分组的数量（这里20种不同的类型组合）
+- `groups.groups.keys()`：返回每个分组的名称（即genres的值）
