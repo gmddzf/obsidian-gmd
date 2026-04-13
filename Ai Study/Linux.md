@@ -493,3 +493,29 @@ mkdir myfolder              # 创建一个文件夹
 mkdir -p a/b/c              # 创建多级目录（a里面套b，b里面套c）
 ```
 ## touch 创建空文件
+```bash
+touch newfile.txt           # 创建一个空文件
+touch file1 file2 file3     # 同时创建多个文件
+```
+## cp复制文件
+```bash
+cp file.txt backup.txt      # 复制文件，新名字叫backup.txt
+cp file.txt /home/user/     # 复制到指定目录
+cp -r folder1 folder2       # 复制整个文件夹（-r表示递归）
+```
+## mv 移动/重命名
+```bash
+mv oldname.txt newname.txt  # 重命名
+mv file.txt /home/user/     # 移动到指定目录
+mv folder1 /tmp/            # 移动整个文件夹
+```
+## rm 删除文件
+```bash
+rm file.txt                 # 删除文件
+rm -r folder                # 删除文件夹（-r递归）
+rm -f file.txt              # 强制删除，不询问
+rm -rf folder               # 删除文件夹且不询问（危险！）
+```
+警告**：
+- `rm -rf /` 会删除整个系统，千万别试
+- 删除前想清楚，Linux没有回收站
