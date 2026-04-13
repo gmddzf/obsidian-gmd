@@ -466,3 +466,9 @@ cp test_data.csv openclaw_deployment/data/input.csv
 # 5. 查看最终结构
 tree openclaw_deployment/
 ```
+# day1
+## pwd 查看目前处于哪里
+## ls 查看当前目录有什么
+```bash
+ls #简单列出文件名
+```
