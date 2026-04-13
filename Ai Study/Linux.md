@@ -470,5 +470,8 @@ tree openclaw_deployment/
 ## pwd 查看目前处于哪里
 ## ls 查看当前目录有什么
 ```bash
-ls #简单列出文件名
+ls          #简单列出文件名
+ls -l       # 详细信息（权限、大小、时间）
+ls -a       # 显示隐藏文件（以.开头的）
+ls -lh      # 人性化显示大小（KB、MB）
 ```
