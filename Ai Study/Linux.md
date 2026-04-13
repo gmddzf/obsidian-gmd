@@ -525,4 +525,21 @@ cat file.txt                # 显示文件全部内容
 cat file1 file2             # 同时显示多个文件
 ```
 **适合**：小文件（几十行以内）
-## less 
+## less 分页查看
+```bash
+less file.txt
+```
+**操作方式**：
+- 空格键：下一页
+- b：上一页
+- /关键词：搜索
+- q：退出
+## head和tail 看开头和结尾
+```bash
+head file.txt               # 显示前10行
+head -20 file.txt           # 显示前20行
+
+tail file.txt               # 显示后10行
+tail -20 file.txt           # 显示后20行
+tail -f logfile.txt         # 实时追踪（看日志文件必备）
+```
