@@ -326,3 +326,12 @@ high_rating_1955=avg_rating_1955.idmax()
 ```python
 # [请在此处填写代码]
 ```
+
+# w3school
+## 使用index参数可以自定义标签
+```python
+import pandas as pd
+a = [1,7,2]
+myvar = pd.Series(a,index = ['x','y','z'])
+print(myvar)
+```
