@@ -392,5 +392,13 @@ Pandas 使用 `loc` 属性返回一行或多行指定行。
 
 
 
+<span style="background: linear-gradient(90deg, #2196F3, #F44336); -webkit-background-clip: text; color: transparent; font-size: 24px; font-weight: bold;">蓝红渐变标题</span>
 
 
+<span style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-size: 20px; font-weight: bold;">带阴影的文字</span>
+
+
+
+<div style="border: 2px solid; border-image: linear-gradient(90deg, #2196F3, #F44336) 1; border-radius: 12px; padding: 16px; margin: 8px 0;"> 渐变边框卡片，内容写这里 </div>
+
+<span style="background: linear-gradient(90deg, #2196F3, #F44336); -webkit-background-clip: text; color: transparent; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">终极特效字</span>
