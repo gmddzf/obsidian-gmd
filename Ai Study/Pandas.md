@@ -345,3 +345,12 @@ calories = {'day1':420,'day2':380,'day3':390}
 myvar = pd.Series(calories)
 print(myvar)
 ```
+**注意：** 字典的键成为标签。
+若要选择字典中的某些项，请使用 `index` 参数并仅指定要包含在 Series 中的项。
+实例：仅使用 "day1" 和 "day2" 的数据创建一个 Series：
+```python
+import pandas as pd
+calories = {"day1": 420, "day2": 380, "day3": 390}
+myvar = pd.Series(calories, index = ["day1", "day2"])
+print(myvar)
+```
