@@ -354,3 +354,17 @@ calories = {"day1": 420, "day2": 380, "day3": 390}
 myvar = pd.Series(calories, index = ["day1", "day2"])
 print(myvar)
 ```
+## 数据帧（DateFrames）
+- Pandas 中的数据集通常是多维表，称为数据帧。
+- Series 就像一列，而数据帧是整个表。
+实例：从两个Series创建一个数据帧：
+```python
+import pandas as pd
+
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+myvar = pd.DataFrame(data)
+print(myvar)
+```
