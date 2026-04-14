@@ -324,7 +324,7 @@ high_rating_1955=avg_rating_1955.idmax()
 
 2. 计算每年（year）的电影总数：
 ```python
-# [请在此处填写代码]
+
 ```
 
 # w3school
@@ -333,5 +333,15 @@ high_rating_1955=avg_rating_1955.idmax()
 import pandas as pd
 a = [1,7,2]
 myvar = pd.Series(a,index = ['x','y','z'])
+print(myvar)
+#实例：返回 "y" 的值：
+print(myvar['y'])
+```
+## 在创建Series时，还可以使用键/值对象，如字典
+```python
+#从字典创建一个简单的Pandas Series
+import pandas as pd
+calories = {'day1':420,'day2':380,'day3':390}
+myvar = pd.Series(calories)
 print(myvar)
 ```
