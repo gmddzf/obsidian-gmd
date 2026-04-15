@@ -429,5 +429,10 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 
 print(df)
 ```
+<details>
+<summary>点击展开</summary> 
 
+这里写内容 
+
+</details>
 
