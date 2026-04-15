@@ -648,3 +648,22 @@ Data columns (total 4 columns):
 **删除行**
 处理空单元格的一种方法是删除包含空单元格的行。
 这通常是可行的，因为数据集可能非常大，删除几行不会对结果产生很大影响。
+#### **实例**
+返回一个没有空单元格的新Data Frame：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+new_df = df.dropna()
+print(new_df.to_string())
+```
+**注意：** 默认情况下，<b><span style="color: #F44336;">`dropna()` </span></b>方法会返回新的 DataFrame，并且不会更改原始 DataFrame。
+如果您想更改原始 DataFrame，请使用 <b><span style="color: orange;">`inplace = True`</span></b> 参数：
+##### <span style="font-size: 22px;">实例</span>
+删除所有包含 NULL 值的行：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.dropna(inplace = True)
+print(df.to_string())
+```
+**注意：** 现在，<b><span style="color: #F44336;">`dropna(inplace = True)`</span></b> 不会返回一个新的 DataFrame，但它会从原始 DataFrame 中删除所有包含 NULL 值的行。
