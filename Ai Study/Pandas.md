@@ -464,3 +464,21 @@ print(df)
 <span style="font-size: 22px;color:red">总结</span>
 **不用 to_string ()**：打印表格，**数据多了会自动省略**，好看但不全。
 **用 to_string ()**：打印**纯文本**，**所有内容全部显示，不省略**。
+## max_rows 返回的行数在 Pandas 选项设置中定义。
+您可以使用 <b><span style="color: #F44336;">`pd.options.display.max_rows`</span></b> 语句检查系统的最大行数
+### **实例**
+检查返回的最大行数：
+```python
+import pandas as pd
+print(pd.options.display.max_rows)
+```
+在我的系统中，数字是 60，这意味着如果 DataFrame 包含超过 60 行，则 `print(df)` 语句将仅返回标题以及前 5 行和最后 5 行。
+
+可以使用相同的语句更改最大行数。
+### **实例**
+```python
+import pandas as pd
+pd.options.display.max_rows = 9999
+df = pd.read_csv('data.csv')
+print(df)
+```
