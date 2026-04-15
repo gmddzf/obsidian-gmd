@@ -759,3 +759,10 @@ _众数_ = 出现频率最高的值。
 ```
 让我们尝试将 'Date' 列中的所有单元格转换为日期。
 Pandas 为此提供了 <b><span style="color: #F44336;">`to_datetime()`</span></b> 方法：
+#### **实例:** 转换为日期：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+print(df.to_string())
+```
