@@ -431,6 +431,15 @@ print(df)
 ```
 <details>
 <summary><strong>定位命名索引</strong></summary> 
-在 `loc` 属性中使用命名索引来返回指定的行。
+<b><span style="color: #F44336;">loc</span></b>：**按索引的 “名字” 取行**（自定义索引后必须用名字）<br>
+<b><span style="color: #F44336;">iloc</span></b>：**按行的 “位置” 取行**（永远用 0,1,2...，和索引名字无关）
 </details>
-
+## 将文件加载到DateFrame中
+如果数据集存储在文件中，Pandas 可以将它们加载到 DataFrame 中。
+### 实例
+将逗号分隔的文件（CSV 文件）加载到 DataFrame 中：
+```python
+import pandas as pd
+df = pd.read_csv('date.csv')
+print (df)
+```
