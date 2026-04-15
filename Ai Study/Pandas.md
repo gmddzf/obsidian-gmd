@@ -592,3 +592,7 @@ Data columns (total 4 columns):
  2   Maxpulse  169 non-null    int64  
  3   Calories  164 non-null    float64
 ```
+**控制**
+<b><span style="color: #F44336;">`info()`</span></b> 方法还告诉我们每列中存在多少个非空值，而在我们的数据集中，"Calories" 列中似乎有 164 个非空值。
+这意味着出于某种原因，"Calories" 列中有 5 行完全没有值。
+在分析数据时，空值或 Null 值可能是有害的，您应该考虑删除具有空值的行。这是迈向所谓数据清洗的一步，您将在接下来的章节中了解更多信息。
