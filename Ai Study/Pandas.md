@@ -408,8 +408,26 @@ print(df.loc[0])
 print(df.loc[[0, 1]])
 ```
  #引用行索引：
+**注意**: 当使用 `[]` 时，结果是 Pandas _DataFrame_。
+<details>
+<summary><strong>命名索引</strong></summary> 
 
+使用 `index` 参数，您可以命名自己的索引。
 
+</details>
+### **实例**
+添加一个名称列表，为每一行命名：
+```python
+import pandas as pd
 
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
+
+print(df)
+```
 
 
