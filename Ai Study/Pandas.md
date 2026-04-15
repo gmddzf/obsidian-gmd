@@ -444,3 +444,11 @@ df = pd.read_csv('date.csv')
 print (df)
 ```
 ## 读取CSV文件
+存储大型数据集的简单方法是使用 CSV 文件（逗号分隔的文件）。
+CSV 文件包含纯文本，是一种众所周知的格式，可以被每个人（包括 Pandas）读取。
+### 实例
+```python
+import pandas as pd
+df = pd.read_csv('date.csv')
+pr
+```
