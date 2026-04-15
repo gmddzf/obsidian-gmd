@@ -430,9 +430,7 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 print(df)
 ```
 <details>
-<summary>点击展开</summary> 
-
-这里写内容 
-
+<summary><strong>定位命名索引</strong></summary> 
+在 `loc` 属性中使用命名索引来返回指定的行。
 </details>
 
