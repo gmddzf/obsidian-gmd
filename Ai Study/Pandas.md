@@ -446,7 +446,7 @@ print (df)
 ## 读取CSV文件
 存储大型数据集的简单方法是使用 CSV 文件（逗号分隔的文件）。
 CSV 文件包含纯文本，是一种众所周知的格式，可以被每个人（包括 Pandas）读取。
-### 实例
+### **实例**
 ```python
 import pandas as pd
 df = pd.read_csv('data.csv')
@@ -454,3 +454,13 @@ print(df.to_string())
 ```
 <b><span style="color: orange;">提示:</span></b>使用 <span style="color: #F44336;">to_string()</span>打印整个 DataFrame。
 如果你有一个包含很多行的大型 DataFrame，Pandas 将仅返回前 5 行和最后 5 行：
+### **实例**
+不使用 <span style="color: #F44336;">to_string()</span> 方法打印 DataFrame：
+```python
+import pandas as pd
+df = pd.read_csv('date_csv')
+print(df)
+```
+<span style="font-size: 22px;color:red">总结</span>
+**不用 to_string ()**：打印表格，**数据多了会自动省略**，好看但不全。
+**用 to_string ()**：打印**纯文本**，**所有内容全部显示，不省略**。
