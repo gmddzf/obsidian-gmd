@@ -645,10 +645,10 @@ Data columns (total 4 columns):
 >该数据集包含重复项（第 11 行和第 12 行）。
 ### **空单元格**
 在分析数据时，空单元格可能会带来错误的结果
-**删除行**
+#### **删除行**
 处理空单元格的一种方法是删除包含空单元格的行。
 这通常是可行的，因为数据集可能非常大，删除几行不会对结果产生很大影响。
-#### **实例**
+##### **实例**
 返回一个没有空单元格的新Data Frame：
 ```python
 import pandas as pd
@@ -667,3 +667,51 @@ df.dropna(inplace = True)
 print(df.to_string())
 ```
 **注意：** 现在，<b><span style="color: #F44336;">`dropna(inplace = True)`</span></b> 不会返回一个新的 DataFrame，但它会从原始 DataFrame 中删除所有包含 NULL 值的行。
+#### **替换空值**
+处理空单元格的另一种方法是插入一个新值。
+这样，您就不必仅仅因为一些空单元格而删除整行。
+<b><span style="color: #F44336;">`fillna()` </span></b>方法允许我们用某个值替换空单元格：
+##### **实例**
+用数字130替换NULL值：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.fillna(130, inplace = True)
+```
+#### **仅替换指定列中的值**
+上面的例子替换了整个 Data Frame 中的所有空单元格。
+要仅替换一列中的空值，请为 DataFrame 指定列名：
+##### **实例**
+在 "Calories" 列中用数字 130 替换 NULL 值
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+df["Calories"].fillna(130, inplace = True)
+```
+#### **使用均值、中位数或众数替换**
+替换空单元格的常见方法是计算列的平均值、中值或众数。
+Pandas 使用 <b><span style="color: #F44336;">`mean()`</span></b>、<b><span style="color: #F44336;">`median()`</span></b> 和 <b><span style="color: #F44336;">`mode()`</span></b> 方法来计算指定列的相应值：
+##### **实例:** 计算平均值（MEAN），并用它替换任何空值：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+x = df["Calories"].mean()
+df["Calories"].fillna(x, inplace = True)
+```
+_平均值_ = 所有值的总和除以值的数量。
+##### **实例：** 计算中位数（MEDIAN），并用它替换任何空值：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+x = df["Calories"].median()
+df["Calories"].fillna(x, inplace = True)
+```
+_中位数_ = 将所有值升序排序后位于中间的值。
+##### **实例：** 计算众数（MODE），并用它替换任何空值：
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+x = df["Calories"].mode()[0]
+df["Calories"].fillna(x, inplace = True)
+```
+_众数_ = 出现频率最高的值。
