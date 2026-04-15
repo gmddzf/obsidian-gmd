@@ -373,6 +373,9 @@ Pandas DataFrame 是二维数据结构，就像二维数组，或者带有行和
 ### 实例
 创建一个简单的 Pandas DataFrame：
 ```python
+import micropip 
+await micropip.install("pandas")
+
 import pandas as pd
 
 data = {
@@ -388,6 +391,23 @@ print(df)
 从上面的结果可以看出，DataFrame 就像一个有行和列的表格。
 Pandas 使用 `loc` 属性返回一行或多行指定行。
 </details>
+### 实例
+返回第 0 行：
+```python
+import pandas as pd
+
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+# 将数据加载到 DataFrame 对象中：
+df = pd.DataFrame(data)
+print(df.loc[0])
+#返回第 0 行和第 1 行：
+#使用索引列表：
+print(df.loc[[0, 1]])
+```
+ #引用行索引：
 
 
 
