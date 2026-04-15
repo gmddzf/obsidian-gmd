@@ -542,3 +542,53 @@ df = pd.DataFrame(data)
 
 print(df)
 ```
+## 查看数据
+获取 DataFrame 快速概览最常用的方法之一是使用 <span style="color: #F44336;">`head()`</span> 方法。
+<span style="color: #F44336;">`head()`</span> 方法从顶部开始返回表头和指定数量的行。
+### **实例**
+通过打印DateFrame的前10行来快速预览：
+```python
+import pandas as pd
+df = pa.read_csv('date.cas')
+print(df.head(10))
+```
+**注意:** 如果未指定行数，`head()` 方法将返回前 5 行。
+还有一个 <span style="color: #F44336;">`tail()` </span>方法用于查看 DataFrame 的最后几行。
+<span style="color: #F44336;">`tail()`</span>方法从底部开始返回表头和指定数量的行。
+## 有关数据的信息
+DataFrame对象有一个名为<b><span style="color: #F44336;">info()</span></b>的方法，可以提供有关数据集的更多信息。
+### 实例
+打印有关数据的信息：
+```pthon
+print(df.info())
+```
+**结果**
+```bash
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 169 entries, 0 to 168
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   Duration  169 non-null    int64  
+ 1   Pulse     169 non-null    int64  
+ 2   Maxpulse  169 non-null    int64  
+ 3   Calories  164 non-null    float64
+dtypes: float64(1), int64(3)
+memory usage: 5.4 KB
+None
+```
+**结果说明**
+结果告诉我们有169行和4列
+```bash
+RangeIndex: 169 entries, 0 to 168
+Data columns (total 4 columns):
+```
+以及每列的名称和数据类型：
+```bash
+#   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   Duration  169 non-null    int64  
+ 1   Pulse     169 non-null    int64  
+ 2   Maxpulse  169 non-null    int64  
+ 3   Calories  164 non-null    float64
+```
