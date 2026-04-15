@@ -483,3 +483,62 @@ df = pd.read_csv('data.csv')
 print(df)
 ```
 ## 读取 JSON
+大型数据集通常以 JSON 格式存储或提取。
+JSON 是纯文本，但具有对象的格式，在编程领域（包括 Pandas）中广为人知。
+在我们的例子中，我们将使用一个名为 'data.json' 的 JSON 文件。
+### **实例**
+将JSON文件加载到DateFrame中：
+```python
+import pandas as pd
+df = pd.read_json('data.json')
+print(df.to_string())
+```
+<b><span style="color: green">提示：</span></b>使用 `to_string()` 打印整个 DataFrame。
+## 字典作为JSON
+**JSON = Python 字典**
+JSON 对象与 Python 字典具有相同的格式。
+如果您的 JSON 代码不在文件中，而是在 Python 字典中，您可以直接将其加载到 DataFrame 中：
+### **实例**
+将Python字典加载到DateFrame中：
+```python
+import pandas as pd
+
+data = {
+  "Duration":{
+    "0":60,
+    "1":60,
+    "2":60,
+    "3":45,
+    "4":45,
+    "5":60
+  },
+  "Pulse":{
+    "0":110,
+    "1":117,
+    "2":103,
+    "3":109,
+    "4":117,
+    "5":102
+  },
+  "Maxpulse":{
+    "0":130,
+    "1":145,
+    "2":135,
+    "3":175,
+    "4":148,
+    "5":127
+  },
+  "Calories":{
+    "0":409,
+    "1":479,
+    "2":340,
+    "3":282,
+    "4":406,
+    "5":300
+  }
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+```
