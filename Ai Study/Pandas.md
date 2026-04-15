@@ -452,5 +452,5 @@ import pandas as pd
 df = pd.read_csv('data.csv')
 print(df.to_string())
 ```
-<b><span style="color: blud;">提示:</span></b>使用 `to_string()` 打印整个 DataFrame。
+<b><span style="color: orange;">提示:</span></b>使用 <span style="color: #F44336;">to_string()</span>打印整个 DataFrame。
 如果你有一个包含很多行的大型 DataFrame，Pandas 将仅返回前 5 行和最后 5 行：
