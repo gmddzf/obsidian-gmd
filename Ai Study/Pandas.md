@@ -857,8 +857,28 @@ df.dropna(subset=['Date'],inplace = True)
 在我们的例子中，这很可能是一个拼写错误，该值应该是 "45" 而不是 "450"，我们可以在第 7 行插入 "45" 
 **实例**
 ```python
-Set "Duration" = 45 in row 7:
+#Set "Duration" = 45 in row 7:
 df.loc[7,'Duration'] = 45
 ```
+<span style="font-size: 22px;"><strong>2、遍历替换值</strong></span>
+
 对于小型数据集，您可能能够逐个替换错误数据，但对于大型数据集则不行。
 对于大型数据集替换错误数据，您可以创建一些规则，例如为合法值设置一些边界，并替换超出边界的任何值。
+**实例**
+遍历 "Duration" 列中的所有值。
+如果值大于 120，则将其设置为 120：
+```python
+for x in df.index:
+ if df.loc[x,"Duration"] > 120:
+  df.loc[x,"Duration"] = 120
+```
+<span style="font-size: 22px;"><strong>3、删除行</strong></span>
+处理错误数据的另一种方法是删除包含错误数据的行。
+这样您就不必找出用什么来替换它们，而且您很可能不需要它们来进行分析。
+**实例**
+删除 "Duration" 大于 120 的行：
+```python
+for x in df.index:
+  if df.loc[x, "Duration"] > 120:
+    df.drop(x, inplace = True)
+```
