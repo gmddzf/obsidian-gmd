@@ -44,4 +44,9 @@ model.fit(X, y)
 >>fit = 训练
 >可以理解为：
 >“model，你看一下这些学生的学习时间和分数，自己找出规律。”
-## 第7
+## 第7~8行：查看训练结果
+~~~python
+print("斜率 a =", model.coef_)
+print("截距 b =", model.intercept_)
+
+~~~
