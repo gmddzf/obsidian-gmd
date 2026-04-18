@@ -1,5 +1,7 @@
 # 线性回归
-## 第1行：导入线性回归
+## 基础部分
+
+### 第1行：导入线性回归
 ```python
 form sklearn.linear_model import LinearRegression
 ```
@@ -7,14 +9,14 @@ form sklearn.linear_model import LinearRegression
 - sklearn= 一个机器学习工具箱
 -  `linear_model` = 工具箱里的“线性模型”区域
 - `LinearRegression` = 线性回归这个具体工具
-## 第2行：导入numpy
+### 第2行：导入numpy
 ```python
 import numpy as np
 ```
 >把 numpy 这个数学库叫进来，并给它起个昵称 np。
 >>为什么要用 numpy？
 >>因为 sklearn 要求数据必须是“数组格式”，numpy 就是专门处理数组的。
-## 第3~4行：准备数据x和y
+### 第3~4行：准备数据x和y
 ~~~python
 X = np.array([[1], [2], [3], [4], [5]])
 y = np.array([50, 60, 65, 70, 80])
@@ -29,14 +31,14 @@ y = np.array([50, 60, 65, 70, 80])
 >> `[50, 60, 65, 70, 80]`
 >>这是 5 个学生的真实分数
 >**y=要预测的结果（考了多少分）**
-## 第5行：创建模型
+### 第5行：创建模型
 ~~~python
 model = LinearRegression()
 ~~~
 >**创建一个线性回归模型对象，叫model**
 >>就像你说：
 >>>给我一个空的线性回归模型，我等会要训练它
-## 第6行：训练模型
+### 第6行：训练模型
 ~~~python
 model.fit(X, y)
 ~~~
@@ -44,7 +46,7 @@ model.fit(X, y)
 >>fit = 训练
 >可以理解为：
 >“model，你看一下这些学生的学习时间和分数，自己找出规律。”
-## 第7~8行：查看训练结果
+### 第7~8行：查看训练结果
 ~~~python
 print("斜率 a =", model.coef_)
 print("截距 b =", model.intercept_)
@@ -71,7 +73,7 @@ model.predict([[6]])
 
 ~~~
 **让 模型预测“学6个小时”会考多少分**
-# 可视化线性回归
+## 可视化线性回归
 ```python
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -117,3 +119,67 @@ plt.show()
 - 把这些点连起来，就是那条红色直线
 >**可以把它理解成：**
 >>把模型学到的那条直线画出来
+## 多点预测
+~~~python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([50, 60, 65, 70, 80])
+
+model = LinearRegression()
+model.fit(X, y)
+
+print("斜率 a =", model.coef_)
+print("截距 b =", model.intercept_)
+print("预测学 6 小时的分数 =", model.predict([[6]]))
+
+# 预测多个学习时间的分数
+X_test = np.array([[6], [7], [8]])   # 学 6、7、8 小时
+y_pred = model.predict(X_test)
+
+print("预测结果：")
+for x, y_hat in zip(X_test.flatten(), y_pred):
+    print(f"学 {x} 小时 -> 预测分数 {y_hat:.2f}")
+~~~
+**1、新加的第一行**
+~~~python
+X_test = np.array([[6], [7], [8]])   # 学 6、7、8 小时
+~~~
+- `X_test` 就是我们要测试的新输入数据。
+- 它的格式和之前的 `X` 一样：二维数组，每个里面一个数字。
+- 这里表示：我们想让模型预测 **学 6 小时、7 小时、8 小时**的分数。
+**2、新加的第二行**
+~~~python
+y_pred = model.predict(X_test)
+
+~~~
+- `model.predict(...)` 就是用训练好的模型来预测结果。
+- 输入是 `X_test`（学 6、7、8 小时）。
+- 输出是 `y_pred`，里面存的是模型预测的分数。
+**3、新加的第三部分（循环打印）**
+~~~python
+print("预测结果：")
+for x, y_hat in zip(X_test.flatten(), y_pred):
+    print(f"学 {x} 小时 -> 预测分数 {y_hat:.2f}")
+~~~
+- `zip(X_test.flatten(), y_pred)`
+    - 把学习时间和预测分数一一配对。
+    - 比如 (6, 87.5), (7, 95.0), (8, 102.5)。
+-  `print(f"学 {x} 小时 -> 预测分数 {y_hat:.2f}")`
+    - 用 f-string 打印结果。
+    - `{y_hat:.2f}` 表示保留两位小数。
+    - 输出会像这样：
+~~~code
+学 6 小时 -> 预测分数 87.50
+学 7 小时 -> 预测分数 95.00
+学 8 小时 -> 预测分数 102.50
+~~~
+**一、numpy的核心知识**
+**1、创建数组**
+~~~python
+import numpy as np
+X = np.array([[1], [2], [3]])
+~~~
+- `np.array` 就是把普通的 Python 列表 `[1,2,3]` 变成 numpy 数组。
+- sklearn 要求输入必须是这种数组格式。
