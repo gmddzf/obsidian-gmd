@@ -218,3 +218,8 @@ for x, y_hat in zip(X_test.flatten(), y_pred):
 - (7, 95.0)
 - (8, 102.5)
 然后逐个打印出来。
+### <span style="background: linear-gradient(90deg, #2196F3, #F44336); -webkit-background-clip: text; color: transparent; font-size: 22px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">超级浓缩总结</span>
+- `zip` = **把多个列表捆成一对一对**
+- `for a,b in zip(list1, list2)` = **同时循环两个列表**
+- AI 里用来循环 **特征 + 标签**，一对一对喂给模型
+- 长度不一样 → 按**最短**的来
