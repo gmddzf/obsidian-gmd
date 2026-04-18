@@ -243,6 +243,7 @@ for x, y_hat in zip(X_test.flatten(), y_pred):
 print("模型的 R² =", model.score(X, y))
 ```
 完整代码片段（放在 `fit` 之后）：
+
 ```python
 model.fit(X, y)
 
