@@ -115,8 +115,8 @@ if __name__ == "__main__":
 - **button type="submit"**：提交按钮，点击后把数据发出去。
 - **POST**：一种提交方式，数据不会显示在网址上。
 ### 🌱 常见的 `type` 值
-
 1. `text`
+2. 
     - 普通文本框，可以输入任何文字。
     ```html
     <input type="text" name="username" placeholder="请输入名字">
@@ -146,3 +146,16 @@ if __name__ == "__main__":
     <input type="submit" value="提交">
     ```
     👉 和 `<button type="submit">提交</button>` 效果一样。
+### **单选按钮（radio）和复选框（checkbox）**
+- **作用：** 让用户在多个选项里只能选一个
+- 写法：
+```html
+<form>
+    <p>请选择性别：</p>
+    <input type="radio" name="gender" value="male"> 男
+    <input type="radio" name="gender" value="female"> 女
+</form>
+```
+>type="radio" 表示这是单选按钮
+>name="gender" 同一组单选按钮必须有相同的名字，这样才能保证只能选什么
+>value="male"/value="female" 提交时传给后台的值，比如选了“男”，后台拿到的就是“male”
