@@ -20,4 +20,43 @@ def about():
 if __name__ == "__main__":
     app.run()
 ```
+# 基础
+## 动态插入变量
+~~~python
+from flask import Flask, render_template
+app = Flask(__name__)
+@app.route("/")
+def home():
+    user_name = "小白同学"   # 定义一个变量
+    return render_template("index.html", name=user_name)
+if __name__ == "__main__":
+    app.run()
+~~~
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个网页</title>
+</head>
+<body>
+    <h1>欢迎来到首页</h1>
+    <p>你好，{{ name }}！这是动态插入的变量。</p>
+    <a href="/about">关于页面</a>
+</body>
+</html>
+
+```
+>- `render_template("index.html", name=user_name)`
+    
+    - 这里我们把 Python 里的变量 `user_name` 传给模板。
+        
+    - 在 HTML 里就能用 `{{ name }}` 来显示它。
+        
+- `{{ name }}`
+    
+    - 这是 Jinja2 模板语法（Flask 默认用的模板引擎）。
+        
+    - 它会把传进来的变量替换成实际的值。
+        
+    - 所以网页上会显示：`你好，小白同学！这是动态插入的变量。`
