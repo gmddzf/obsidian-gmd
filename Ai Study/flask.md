@@ -55,3 +55,38 @@ if __name__ == "__main__":
     - 这是 Jinja2 模板语法（Flask 默认用的模板引擎）。
     - 它会把传进来的变量替换成实际的值。
     - 所以网页上会显示：`你好，小白同学！这是动态插入的变量。`
+## 表单
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表单示例</title>
+</head>
+<body>
+    <h1>欢迎来到首页</h1>
+    <form action="/submit" method="post">
+        <label for="name">请输入你的名字：</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>
+```
+
+```python
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/submit", methods=["POST"])
+def submit():
+    user_name = request.form["name"]   # 获取表单里的数据
+    return f"<h1>你好，{user_name}！</h1>"
+
+if __name__ == "__main__":
+    app.run()
+```
