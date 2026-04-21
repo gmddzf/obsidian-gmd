@@ -171,6 +171,6 @@ if __name__ == "__main__":
     <input type="checkbox" name="hobby" value="music"> 音乐
 </form>
 ```
->`type="checkbox"` → 表示这是复选框。
+`type="checkbox"` → 表示这是复选框。
  `name="hobby"` → 多个复选框可以用同一个名字。
  `value="reading"` 等 → 提交时传给后台的值。比如你勾选了“阅读”和“音乐”，后台就能拿到这两个值。
