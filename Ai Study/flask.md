@@ -184,3 +184,5 @@ def submit():
     return f"<h1>性别：{gender}, 爱好：{', '.join(hobbies)}</h1>"
 
 ```
+- 单选按钮用 `request.form["gender"]`。
+- 复选框要用 `request.form.getlist("hobby")`，因为可能有多个值。
