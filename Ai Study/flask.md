@@ -47,16 +47,11 @@ if __name__ == "__main__":
 </html>
 
 ```
->- `render_template("index.html", name=user_name)`
-    
-    - 这里我们把 Python 里的变量 `user_name` 传给模板。
-        
-    - 在 HTML 里就能用 `{{ name }}` 来显示它。
+> `render_template("index.html", name=user_name)`
+    这里我们把 Python 里的变量 `user_name` 传给模板。 
+    在 HTML 里就能用 `{{ name }}` 来显示它。
         
 - `{{ name }}`
-    
     - 这是 Jinja2 模板语法（Flask 默认用的模板引擎）。
-        
     - 它会把传进来的变量替换成实际的值。
-        
     - 所以网页上会显示：`你好，小白同学！这是动态插入的变量。`
