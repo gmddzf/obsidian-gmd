@@ -175,3 +175,12 @@ if __name__ == "__main__":
  `name="hobby"` → 多个复选框可以用同一个名字。
  `value="reading"` 等 → 提交时传给后台的值。比如你勾选了“阅读”和“音乐”，后台就能拿到这两个值。
  
+**在Flask里接收这些值**
+```python
+@app.route("/submit", methods=["POST"])
+def submit():
+    gender = request.form["gender"]   # 单选按钮，只能取一个值
+    hobbies = request.form.getlist("hobby")  # 复选框，可能有多个值
+    return f"<h1>性别：{gender}, 爱好：{', '.join(hobbies)}</h1>"
+
+```
