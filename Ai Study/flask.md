@@ -159,3 +159,18 @@ if __name__ == "__main__":
 >type="radio" 表示这是单选按钮
 >name="gender" 同一组单选按钮必须有相同的名字，这样才能保证只能选什么
 >value="male"/value="female" 提交时传给后台的值，比如选了“男”，后台拿到的就是“male”
+
+**复选框（checkbox）**
+**作用：** 让用户可以同时选择多个选项
+写法：
+```html
+<form>
+    <p>请选择爱好：</p>
+    <input type="checkbox" name="hobby" value="reading"> 阅读
+    <input type="checkbox" name="hobby" value="sports"> 运动
+    <input type="checkbox" name="hobby" value="music"> 音乐
+</form>
+```
+>`type="checkbox"` → 表示这是复选框。
+ `name="hobby"` → 多个复选框可以用同一个名字。
+ `value="reading"` 等 → 提交时传给后台的值。比如你勾选了“阅读”和“音乐”，后台就能拿到这两个值。
