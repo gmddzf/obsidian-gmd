@@ -87,7 +87,7 @@ def hello():
 if __name__ == "__main__":
     app.run()
 ```
-### 拆解
+### **拆解**
  1. `<form action="/hello" method="post">`
 - **form**：表示这是一个表单区域。
 - **action="/hello"**：告诉浏览器，用户点提交后，把数据发送到网站的 `/hello` 地址。
@@ -114,3 +114,35 @@ if __name__ == "__main__":
 - **type="text"**：文本框。
 - **button type="submit"**：提交按钮，点击后把数据发出去。
 - **POST**：一种提交方式，数据不会显示在网址上。
+### 🌱 常见的 `type` 值
+
+1. `text`
+    - 普通文本框，可以输入任何文字。
+    ```html
+    <input type="text" name="username" placeholder="请输入名字">
+    ```
+    👉 用来输入名字、地址等。
+2. `password`
+    - 密码框，输入的内容会显示成小点点或星号。     
+    ```html
+    <input type="password" name="pwd" placeholder="请输入密码">
+    ```
+    👉 用来输入密码，别人看不到你输入的内容。
+3. `number`
+    - 数字框，只能输入数字，还会出现上下箭头可以加减。   
+    ```html
+    <input type="number" name="age" placeholder="请输入年龄">
+    ```
+    👉 用来输入年龄、数量等。
+4. `email`
+    - 邮箱框，浏览器会检查输入的格式是不是邮箱。        
+    ```html
+    <input type="email" name="mail" placeholder="请输入邮箱">
+    ```
+    👉 如果你输入 `abc`，浏览器会提示格式不对。
+5. `submit`
+    - 提交按钮，点击后会把表单里的数据发送到服务器。
+    ```html
+    <input type="submit" value="提交">
+    ```
+    👉 和 `<button type="submit">提交</button>` 效果一样。
