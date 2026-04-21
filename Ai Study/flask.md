@@ -186,3 +186,40 @@ def submit():
 ```
 - 单选按钮用 `request.form["gender"]`。
 - 复选框要用 `request.form.getlist("hobby")`，因为可能有多个值。
+### **下拉菜单**
+```html
+<form action="/submit" method="post">
+    <p>请选择你的城市：</p>
+    <select name="city">
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+        <option value="guangzhou">广州</option>
+    </select>
+    <button type="submit">提交</button>
+</form>
+```
+**解释：**
+- `<select name="city">` 表示这是一个下拉菜单，名字叫 `city`。提交时，Flask 就能用 `request.form["city"]` 拿到用户选择的值。
+- `<option value="beijing">北京</option>` 表示一个选项。
+    - `value="beijing"` → 提交时传给后台的值。
+    - `北京` → 用户在网页上看到的文字。
+**Flask接收数据：**
+```python
+@app.route("/submit", methods=["POST"])
+def submit():
+    city = request.form["city"]
+    return f"<h1>你选择的城市是：{city}</h1>"
+```
+**扩展：多位下拉菜单**
+```html
+<select name="city" multiple>
+    <option value="beijing">北京</option>
+    <option value="shanghai">上海</option>
+    <option value="guangzhou">广州</option>
+</select>
+```
+**在Flask里要用：**
+```python
+cities = request.form.getlist("city")
+```
+这样才能拿到多个值。
