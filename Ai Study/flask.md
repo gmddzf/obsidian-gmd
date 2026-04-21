@@ -60,35 +60,32 @@ if __name__ == "__main__":
 <!DOCTYPE html>
 <html>
 <head>
-    <title>表单示例</title>
+    <title>输入示例</title>
 </head>
 <body>
-    <h1>欢迎来到首页</h1>
-    <form action="/submit" method="post">
-        <label for="name">请输入你的名字：</label>
-        <input type="text" id="name" name="name">
-        <button type="submit">提交</button>
-    </form>
+    <h1>请输入你的名字</h1>
+    <form action="/hello" method="post">
+        <input type="text" name="username" placeholder="名字">
+        <input type="text" name="userage" placeholder="年龄">
+        <button type="submit">提交</button>
+    </form>
 </body>
 </html>
 ```
 
 ```python
 from flask import Flask, render_template, request
-
-app = Flask(__name__)
-
+app = Flask(__name__)  
 @app.route("/")
 def home():
-    return render_template("index.html")
-
-@app.route("/submit", methods=["POST"])
-def submit():
-    user_name = request.form["name"]   # 获取表单里的数据
-    return f"<h1>你好，{user_name}！</h1>"
-
+    return render_template("index.html")
+@app.route("/hello", methods=["POST"])
+def hello():
+    name = request.form["username"]   # 获取姓名
+    age = request.form["userage"] #获取年龄
+    return f"<h1>你好，{name}！,你的年龄是{age}</h1>"
 if __name__ == "__main__":
-    app.run()
+    app.run()
 ```
 ### 拆解
  1. `<form action="/hello" method="post">`
