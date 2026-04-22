@@ -248,3 +248,6 @@ Content-Type:text/csv
 - **中文意思**：工作表
 - **作用**：Excel 文件由一个或多个工作表组成。
 ### **上传word文档** application/vnd.openxmlformats-officedocument.wordprocessingml.document
+```code
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+```
