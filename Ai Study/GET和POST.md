@@ -125,4 +125,5 @@ Content-Type: image/png
 ```code
 Content-Type:text/palin
 ```
-服务器就会按”纯文本“
+服务器就会按”纯文本“来解析。
+### 当提交的数据是**有结构的JSON**用
