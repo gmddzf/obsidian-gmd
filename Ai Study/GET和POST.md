@@ -240,4 +240,11 @@ Content-Type:text/csv
 - **中文意思**：Office 文档
 - **作用**：说明这是一个 Office 系列的文档。
 `spreadsheet`
+- **英文原词**：spreadsheet
+- **中文意思**：电子表格
+- **作用**：说明这是 Excel 表格文件。
 `sheet`
+- **英文原词**：sheet
+- **中文意思**：工作表
+- **作用**：Excel 文件由一个或多个工作表组成。
+### **上传word文档** application/vnd.openxmlformats-officedocument.wordprocessingml.document
