@@ -167,3 +167,6 @@ Content-Type:text/html
 意思就是：服务器你好，我发给你的是一个HTML网页，请按网页
 ### **提交PNG照片时**
 image/png
+`image`
+- 图像；图片
+- 告诉服务器，这是
