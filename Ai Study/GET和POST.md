@@ -187,3 +187,7 @@ Content-Type:image/png
 ### **上传MP3音频文件时** audio/mpeg
 `audio`
 - 音频、声音
+- 告诉服务器，这是一种声音数据，而不是文本或图片。
+`mpeg`
+- 告诉服务器，这个音频文件的具体格式是 MPEG 编码。
+- MP3 就是 MPEG 音频压缩的一种，非常常见。
