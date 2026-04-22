@@ -26,4 +26,7 @@ Content-Type:application/json
 为什么不是写成 `json`？ 因为 HTTP 的标准规定 JSON 属于一种“应用程序数据格式”，所以写成：
 `application/json`
 ### **发送表单数据**
-application/x
+`application/x-www-form-urlencoded`
+1. application
+    - 应用程序
+    - 这是一种”应用cheng
