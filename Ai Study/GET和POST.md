@@ -25,7 +25,7 @@ Content-Type:application/json
     - 作用：告诉服务器”我发的是JSON数据“
 为什么不是写成 `json`？ 因为 HTTP 的标准规定 JSON 属于一种“应用程序数据格式”，所以写成：
 `application/json`
-### **发送表单数据**
+### **发送表单数据** `application/x-www-form-urlencoded`
 `application/x-www-form-urlencoded`
 1. application
     - 应用程序
@@ -44,7 +44,7 @@ Content-Type:application/json
         - 数据会被编码成URL的格式
         - 例如空格会变成`+`，中文会变成`%E4%BD%A0%E5%A5%BD`
     
-### **发送文件**
+### **发送文件** `multipart/form-data`
 `multipart/form-data`
 1. `multipart`
     - multi+part
@@ -108,7 +108,7 @@ Content-Type: image/png
 - boundary把它们隔开
 - 服务器可以逐段解析
 这就是为什么 **只要有文件，就必须用multipart/form-data**
-### **发送纯文本**
+### **发送纯文本** `text/plain`
 `text/plain`
 1. `text`
     - 文本
@@ -136,7 +136,7 @@ Content-Type:text/palin
 Content-Type: application/json
 ```
 因为服务器要按JSON的规则来解析
-### **传输HTML本身**
+### **传输HTML本身** `text/html`
 text/html
 比如：
 ```code
@@ -165,7 +165,7 @@ text/html
 Content-Type:text/html
 ```
 意思就是：服务器你好，我发给你的是一个HTML网页，请按网页
-### **提交PNG照片时**
+### **提交PNG照片时** `image/png`
 image/png
 `image`
 - 图像；图片
@@ -177,3 +177,4 @@ image/png
 Content-Type:image/png
 ```
 <b><span style="color: #F44336;">其他的照片就是什么格式照片后面对应什么格式</span></b>
+### 
