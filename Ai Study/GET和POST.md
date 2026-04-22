@@ -220,5 +220,5 @@ alice,25
 ```
 请求头应该写：
 ```code
-
+Content-Type:text/csv
 ```
