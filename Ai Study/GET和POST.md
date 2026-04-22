@@ -223,9 +223,21 @@ alice,25
 Content-Type:text/csv
 ```
 ### **上传Excel文件** application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-application
-vnd
-openxmlformats
-officedocument
-spreadsheet
-sheet
+`application`
+- **英文原词**：application
+- **中文意思**：应用程序
+- **作用**：告诉服务器，这不是纯文本，而是一种应用程序数据格式。
+`vnd`
+- **英文原词**：vendor
+- **中文意思**：厂商
+- **作用**：表示这是由某个厂商定义的专用格式。
+`openxmlformats`
+- **英文原词**：Open XML Formats
+- **中文意思**：开放的 XML 格式
+- **作用**：微软 Office 使用的一种基于 XML 的文件标准。
+`officedocument`
+- **英文原词**：Office Document
+- **中文意思**：Office 文档
+- **作用**：说明这是一个 Office 系列的文档。
+`spreadsheet`
+`sheet`
