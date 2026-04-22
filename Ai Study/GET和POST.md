@@ -110,4 +110,9 @@ Content-Type: image/png
 这就是为什么 **只要有文件，就必须用multipart/form-data**
 ### **发送纯文本**
 `text/plain`
-1. 
+1. `text`
+    文本
+    告诉服务器这是纯文本，没有复杂结构
+2. `plain`
+    纯的、简单的
+    没有格式化的，没有bi
