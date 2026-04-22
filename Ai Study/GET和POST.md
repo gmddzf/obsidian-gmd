@@ -4,3 +4,7 @@
 - 方法（GET/POST）
 - 路径（要访问的资源）
 - 协议版本（HTTP/1.1)
+例如：
+```code
+GET /weather HTTP/1.1
+```
