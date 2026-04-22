@@ -44,3 +44,38 @@ Content-Type:application/json
         - 数据会被编码成URL的格式
         - 例如空格会变成`+`，中文会变成`%E4%BD%A0%E5%A5%BD`
     
+### **发送文件**
+`multipart/form-data`
+1. `multipart`
+    - multi+part
+    - multi:多
+    - part:部分
+    - 多部分的
+    - 这个请求体不是一整块，而是被拆成很多部分（part）
+    - 因为上传文件时，数据结构很复杂：
+        - 一部分是文本字段（比如 username=md）
+        - 一部分是文件内容（二进制数据）
+        - 一部分是文件名
+        - 一部分是文件类型
+2. `form-data`
+    form:表单
+    date:数据
+    中文意思：表单的数据
+    含义：这些多部分内容来自于一个HTML表单
+如果上传一张图片，浏览器就会把请求体拆成这样：
+```code
+------boundary
+Content-Disposition: form-data; name="username"
+
+md
+------boundary
+Content-Disposition: form-data; name="avatar"; filename="me.png"
+Content-Type: image/png
+
+(这里是图片的二进制内容)
+------boundary--
+```
+- 第一段是普通文本（username）
+- 第二段是文件（avatar）
+- 每一段都有自己的头部（Content-Disposition、Content-Type）
+- 整个请求体被 boundary 分隔成多段（multi-part）
