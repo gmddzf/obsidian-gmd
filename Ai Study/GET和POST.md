@@ -126,7 +126,7 @@ Content-Type: image/png
 Content-Type:text/palin
 ```
 服务器就会按”纯文本“来解析。
-### 当提交的数据是**有结构的JSON**用application/json
+### **当提交的数据是有结构的JSON用application/json**
 比如：
 ```code
 {"title":"留言","content":"你好，这是我的留言"}
@@ -135,3 +135,4 @@ Content-Type:text/palin
 ```code
 Content-Type: application/json
 ```
+因为服务器要按JSON的规则来解析
