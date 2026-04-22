@@ -25,3 +25,5 @@ Content-Type:application/json
     - 作用：告诉服务器”我发的是JSON数据“
 为什么不是写成 `json`？ 因为 HTTP 的标准规定 JSON 属于一种“应用程序数据格式”，所以写成：
 `application/json`
+### **发送表单数据**
+application/x
