@@ -129,5 +129,9 @@ Content-Type:text/palin
 ### 当提交的数据是**有结构的JSON**用application/json
 比如：
 ```code
-{"title":"留言",}
+{"title":"留言","content":"你好，这是我的留言"}
+```
+这时候就必须用：
+```code
+Content-Type: application/json
 ```
