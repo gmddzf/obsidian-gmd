@@ -102,3 +102,9 @@ Content-Type: image/png
 (这里是图片的二进制内容)
 ------boundary--
 ```
+- 文本字段是一段
+- 文件是一段
+- 每段都有自己的头部
+- boundary把它们隔开
+- 服务器可以逐段解析
+这就是为什么 **只要有文件，就必须用multipart/form-data**
