@@ -176,3 +176,4 @@ image/png
 ```code
 Content-Type:image/png
 ```
+<b><span style="color: #F44336;">其他的照片就是什么格式照片后面对应什么格式</span></b>
