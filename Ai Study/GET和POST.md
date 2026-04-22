@@ -121,4 +121,8 @@ Content-Type: image/png
 ```code
 你好，这是我的留言
 ```
-那qi
+那请求头应该写：
+```code
+Content-Type:text/palin
+```
+服务器就会按”纯文本“
