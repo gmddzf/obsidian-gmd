@@ -41,5 +41,6 @@ Content-Type:application/json
         - 这是网页表单的数据格式
     - urlencoded
         - URL编码
-        - 数据会被
+        - 数据会被编码成URL的格式
+        - 例如空格会变成`+`，中文会变成`%E4%BD%A0%E5%A5%BD`
     
