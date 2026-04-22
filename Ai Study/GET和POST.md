@@ -169,4 +169,6 @@ Content-Type:text/html
 image/png
 `image`
 - 图像；图片
-- 告诉服务器，这是
+- 告诉服务器，这是一种照片数据，而不是文本或应用数据。
+`png`
+- 告诉服务器，这张图片的具体格式是PNG
