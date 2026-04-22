@@ -29,4 +29,7 @@ Content-Type:application/json
 `application/x-www-form-urlencoded`
 1. application
     - 应用程序
-    - 这是一种”应用cheng
+    - 这是一种”应用程序数据格式“，不是纯文本
+2. /
+    表示”类型/子类型“
+3. 
