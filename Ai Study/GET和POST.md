@@ -7,5 +7,5 @@
 例如：
 ```code
 GET /weather HTTP/1.1
-#
+POST /login HTTP/1.1
 ```
