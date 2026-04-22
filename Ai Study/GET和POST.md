@@ -39,4 +39,7 @@ Content-Type:application/json
     - www-form
         - 网页表单
         - 这是网页表单的数据格式
+    - urlencoded
+        - URL编码
+        - 数据会被
     
