@@ -79,3 +79,26 @@ Content-Type: image/png
 - 第二段是文件（avatar）
 - 每一段都有自己的头部（Content-Disposition、Content-Type）
 - 整个请求体被 boundary 分隔成多段（multi-part）
+**multipart是唯一能同时装文本+文件的格式**
+普通表单格式：
+```Code
+application/x-www-form-urlencoded
+```
+只能装：
+```code
+username=md&password=123
+```
+它不能装文件，因为文件是二进制，不能被URL编码。
+而multipat/form-data可以这样装：
+```code
+------boundary
+Content-Disposition: form-data; name="username"
+
+md
+------boundary
+Content-Disposition: form-data; name="avatar"; filename="me.png"
+Content-Type: image/png
+
+(这里是图片的二进制内容)
+------boundary--
+```
