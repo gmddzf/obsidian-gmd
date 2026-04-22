@@ -32,4 +32,7 @@ Content-Type:application/json
     - 这是一种”应用程序数据格式“，不是纯文本
 2. /
     表示”类型/子类型“
-3. 
+3. x-www-form-urlencoded
+    - x-
+        - 历史遗留前缀
+    
