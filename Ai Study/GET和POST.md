@@ -184,3 +184,6 @@ Content-Type:image/png
 `pdf`
 - 告诉服务器，这个文件的具体格式是 PDF。
 - PDF 可以包含文字、图片、表格，保持排版一致。
+### **上传MP3音频文件时** audio/mpeg
+`audio`
+- 音频、声音
