@@ -35,4 +35,8 @@ Content-Type:application/json
 3. x-www-form-urlencoded
     - x-
         - 历史遗留前缀
+        - 表示”非标准但被广泛使用的格式“
+    - www-form
+        - 网页表单
+        - 这是网页表单的数据格式
     
