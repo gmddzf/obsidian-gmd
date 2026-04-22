@@ -126,4 +126,8 @@ Content-Type: image/png
 Content-Type:text/palin
 ```
 服务器就会按”纯文本“来解析。
-### 当提交的数据是**有结构的JSON**用
+### 当提交的数据是**有结构的JSON**用application/json
+比如：
+```code
+{"title":"留言",}
+```
