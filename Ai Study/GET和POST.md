@@ -136,3 +136,13 @@ Content-Type:text/palin
 Content-Type: application/json
 ```
 因为服务器要按JSON的规则来解析
+### **传输HTML本身**
+text/html
+比如：
+```code
+<html>
+  <head><title>我的页面</title></head>
+  <body><h1>你好</h1></body>
+</html>
+```
+就必须用`text/`
