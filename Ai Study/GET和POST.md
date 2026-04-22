@@ -191,3 +191,7 @@ Content-Type:image/png
 `mpeg`
 - 告诉服务器，这个音频文件的具体格式是 MPEG 编码。
 - MP3 就是 MPEG 音频压缩的一种，非常常见。
+### **上传MP4文件时** `video/mp4`
+`video`
+- 视频、影像
+- 
