@@ -11,3 +11,17 @@ POST /login HTTP/1.1
 ```
 ## HTTP请求的第二部分：请求头（Headers）
 作用是：告诉服务器“我是谁、我能接受什么、我带了什么格式的数据”。
+比如：
+```code
+Content-Type:application/json
+```
+1. Content-Type  
+    - 英文单词：Content-Type
+    - 中文意思：内容的类型
+    - 作用：告诉服务器"我发给你的数据是什么格式“
+2. application/json
+    - 英文单词：application/json
+    - 中文意思：应用程序格式/JSON格式
+    - 作用：告诉服务器”我发的是JSON数据“
+为什么不是写成 `json`？ 因为 HTTP 的标准规定 JSON 属于一种“应用程序数据格式”，所以写成：
+`application/json`
