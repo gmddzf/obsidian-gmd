@@ -177,4 +177,10 @@ image/png
 Content-Type:image/png
 ```
 <b><span style="color: #F44336;">其他的照片就是什么格式照片后面对应什么格式</span></b>
-### 
+### **上传PDF文件`appication/pdf`**
+`application`
+- 应用程序
+- 告诉服务器，这不是纯文本，而是一种应用程序数据格式。
+`pdf`
+- 告诉服务器，这个文件的具体格式是 PDF。
+- PDF 可以包含文字、图片、表格，保持排版一致。
