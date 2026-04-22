@@ -109,4 +109,5 @@ Content-Type: image/png
 - 服务器可以逐段解析
 这就是为什么 **只要有文件，就必须用multipart/form-data**
 ### **发送纯文本**
-text/plain
+`text/plain`
+1. 
